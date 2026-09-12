@@ -1,0 +1,345 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "INIT",
+			"description": "Group of init actions: developing cell's bonding",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "SourceId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 660377934894514
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceAX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 700591528712075
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceAY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 360466725113497
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceBX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 432014651416704
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceBY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 423751157485670
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceFX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 680918535416996
+				},
+				{
+					"eventType": "variable",
+					"name": "SourceFY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 332304020970973
+				},
+				{
+					"eventType": "variable",
+					"name": "BestDinstance",
+					"type": "number",
+					"initialValue": "999999",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 252963757205633
+				},
+				{
+					"eventType": "variable",
+					"name": "BestID",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 620682395174595
+				},
+				{
+					"eventType": "variable",
+					"name": "Tolerance",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 401792544753689
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 288692852498107
+						}
+					],
+					"actions": [],
+					"sid": 991356967871812,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 578134429592319,
+									"parameters": {
+										"object": "Cell"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 349715924571999,
+									"parameters": {
+										"variable": "SourceId",
+										"value": "Cell.UID"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 709046806878828,
+									"parameters": {
+										"variable": "SourceAX",
+										"value": "Cell.ImagePointX(\"a\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 763720917443858,
+									"parameters": {
+										"variable": "SourceAY",
+										"value": "Cell.ImagePointY(\"a\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 432571676799828,
+									"parameters": {
+										"variable": "SourceBX",
+										"value": "Cell.ImagePointX(\"b\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 404434076584454,
+									"parameters": {
+										"variable": "SourceBY",
+										"value": "Cell.ImagePointY(\"b\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 333724396334210,
+									"parameters": {
+										"variable": "SourceFX",
+										"value": "Cell.ImagePointX(\"f\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 166612146753008,
+									"parameters": {
+										"variable": "SourceFY",
+										"value": "Cell.ImagePointY(\"f\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 216932326818630,
+									"parameters": {
+										"variable": "Tolerance",
+										"value": "Cell.Width * 0.08"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 833842245577971,
+									"parameters": {
+										"instance-variable": "NextAId",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 153679913628793,
+									"parameters": {
+										"instance-variable": "NextBId",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 159059784980181,
+									"parameters": {
+										"instance-variable": "NextFCell",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 670817960236023,
+									"parameters": {
+										"variable": "BestDinstance",
+										"value": "999999"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 925717605816304,
+									"parameters": {
+										"variable": "BestID",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 192081880342649,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 245162264001988,
+											"parameters": {
+												"object": "CellCandidates"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 573475626359325,
+											"parameters": {
+												"first-value": "CellCandidates.UID",
+												"comparison": 1,
+												"second-value": "SourceId"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 296347986583908,
+											"parameters": {
+												"first-value": "distance(SourceAX, SourceAY, CellCandidates.ImagePointX(\"d\"), CellCandidates.ImagePointY(\"d\"))",
+												"comparison": 2,
+												"second-value": "Tolerance"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 132072883804411,
+											"parameters": {
+												"first-value": "distance(SourceAX, SourceAY, CellCandidates.ImagePointX(\"d\"), CellCandidates.ImagePointY(\"d\"))",
+												"comparison": 2,
+												"second-value": "BestDinstance"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 139920247051272,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "distance(SourceAX, SourceAY, CellCandidates.ImagePointX(\"d\"), CellCandidates.ImagePointY(\"d\"))"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 934415591728360,
+											"parameters": {
+												"variable": "BestID",
+												"value": "CellCandidates.UID"
+											}
+										}
+									],
+									"sid": 573502247373191
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 708683439831168,
+											"parameters": {
+												"instance-variable": "NextAId",
+												"value": "BestID"
+											}
+										}
+									],
+									"sid": 236881948403250
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 161173091543951
+		}
+	],
+	"sid": 186625743260119
+}

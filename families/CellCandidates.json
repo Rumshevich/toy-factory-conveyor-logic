@@ -1,0 +1,11 @@
+{
+	"name": "CellCandidates",
+	"plugin-id": "Sprite",
+	"sid": 581853265423522,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Cell"
+	]
+}
