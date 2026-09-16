@@ -27,11 +27,18 @@
 			"sid": 245761120307201
 		},
 		{
-			"name": "NextFCell",
+			"name": "NextFId",
 			"type": "number",
 			"desc": "Next F Cell",
 			"show": true,
 			"sid": 239299895111062
+		},
+		{
+			"name": "ConfigType",
+			"type": "string",
+			"desc": "\"\" for ordinary cells, \"start\" for cells on the first row, \"end\" for cells on the last row",
+			"show": true,
+			"sid": 552210610140629
 		}
 	],
 	"behaviorTypes": [],

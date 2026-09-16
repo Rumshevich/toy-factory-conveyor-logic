@@ -12,6 +12,13 @@
 			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "y5uytveyeaa",
@@ -20,7 +27,8 @@
 			"Conveyor",
 			"Base",
 			"Stopper",
-			"Cell"
+			"Cell",
+			"Detail"
 		],
 		"subfolders": []
 	},

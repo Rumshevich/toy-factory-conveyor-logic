@@ -124,7 +124,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -162,7 +163,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -200,7 +202,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -238,7 +241,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -276,7 +280,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -314,7 +319,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "start"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -352,7 +358,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -390,7 +397,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -428,7 +436,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -466,7 +475,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -504,7 +514,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -542,7 +553,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -580,7 +592,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -618,7 +631,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -656,7 +670,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -694,7 +709,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -732,7 +748,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -770,7 +787,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -808,7 +826,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -846,7 +865,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -884,7 +904,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -922,7 +943,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -960,7 +982,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -998,7 +1021,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1036,7 +1060,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1074,7 +1099,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1112,7 +1138,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1150,7 +1177,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1188,7 +1216,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1226,7 +1255,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1264,7 +1294,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1302,7 +1333,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1340,7 +1372,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1378,7 +1411,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1416,7 +1450,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1454,7 +1489,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1492,7 +1528,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1530,7 +1567,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1568,7 +1606,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1606,7 +1645,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1644,7 +1684,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1682,7 +1723,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1720,7 +1762,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1758,7 +1801,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1796,7 +1840,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1834,7 +1879,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1872,7 +1918,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1910,7 +1957,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1948,7 +1996,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1986,7 +2035,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2024,7 +2074,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2062,7 +2113,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2100,7 +2152,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2138,7 +2191,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2176,7 +2230,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2214,7 +2269,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2252,7 +2308,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2290,7 +2347,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2328,7 +2386,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2366,7 +2425,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2404,7 +2464,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2442,7 +2503,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2480,7 +2542,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2518,7 +2581,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2556,7 +2620,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2594,7 +2659,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2632,7 +2698,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2670,7 +2737,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2708,7 +2776,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2746,7 +2815,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2784,7 +2854,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2822,7 +2893,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2860,7 +2932,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2898,7 +2971,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2936,7 +3010,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -2974,7 +3049,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3012,7 +3088,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3050,7 +3127,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3088,7 +3166,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3126,7 +3205,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3164,7 +3244,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3202,7 +3283,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3240,7 +3322,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3278,7 +3361,8 @@
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
-						"NextFCell": -1
+						"NextFId": -1,
+						"ConfigType": "end"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -3357,6 +3441,51 @@
 						"y": -144,
 						"width": 250,
 						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Detail",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 89,
+					"sid": 567171728143695,
+					"tags": "",
+					"instanceVariables": {
+						"TargetCellId": 0,
+						"CurrentCellId": -1,
+						"NextACellId": -1,
+						"NextFCellId": -1,
+						"NextBCellId": -1
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 531,
+						"y": -304,
+						"width": 60,
+						"height": 60,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

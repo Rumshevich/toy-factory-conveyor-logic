@@ -228,7 +228,7 @@
 									"objectClass": "Cell",
 									"sid": 159059784980181,
 									"parameters": {
-										"instance-variable": "NextFCell",
+										"instance-variable": "NextFId",
 										"value": "-1"
 									}
 								},
@@ -329,9 +329,223 @@
 												"instance-variable": "NextAId",
 												"value": "BestID"
 											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 193768069226303,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "999999"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 816679455064905,
+											"parameters": {
+												"variable": "BestID",
+												"value": "-1"
+											}
 										}
 									],
 									"sid": 236881948403250
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 951045226303612,
+											"parameters": {
+												"object": "CellCandidates"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 712115691922617,
+											"parameters": {
+												"first-value": "CellCandidates.UID",
+												"comparison": 1,
+												"second-value": "SourceId"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 646360692506028,
+											"parameters": {
+												"first-value": "distance(SourceBX, SourceBY, CellCandidates.ImagePointX(\"e\"), CellCandidates.ImagePointY(\"e\"))",
+												"comparison": 2,
+												"second-value": "Tolerance"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 481267026881943,
+											"parameters": {
+												"first-value": "distance(SourceBX, SourceBY, CellCandidates.ImagePointX(\"e\"), CellCandidates.ImagePointY(\"e\"))",
+												"comparison": 2,
+												"second-value": "BestDinstance"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 437176455038532,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "distance(SourceBX, SourceBY, CellCandidates.ImagePointX(\"e\"), CellCandidates.ImagePointY(\"e\"))"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 178480255119033,
+											"parameters": {
+												"variable": "BestID",
+												"value": "CellCandidates.UID"
+											}
+										}
+									],
+									"sid": 800248357144747
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 683483927054200,
+											"parameters": {
+												"instance-variable": "NextBId",
+												"value": "BestID"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 557454805968913,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "999999"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 483880308195724,
+											"parameters": {
+												"variable": "BestID",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 561775099371728
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 106210984605252,
+											"parameters": {
+												"object": "CellCandidates"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 814509292777762,
+											"parameters": {
+												"first-value": "CellCandidates.UID",
+												"comparison": 1,
+												"second-value": "SourceId"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 805440198931084,
+											"parameters": {
+												"first-value": "distance(SourceFX, SourceFY, CellCandidates.ImagePointX(\"c\"), CellCandidates.ImagePointY(\"c\"))",
+												"comparison": 2,
+												"second-value": "Tolerance"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 212792346642859,
+											"parameters": {
+												"first-value": "distance(SourceFX, SourceFY, CellCandidates.ImagePointX(\"c\"), CellCandidates.ImagePointY(\"c\"))",
+												"comparison": 2,
+												"second-value": "BestDinstance"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 958081929868609,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "distance(SourceFX, SourceFY, CellCandidates.ImagePointX(\"c\"), CellCandidates.ImagePointY(\"c\"))"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 504581082761320,
+											"parameters": {
+												"variable": "BestID",
+												"value": "CellCandidates.UID"
+											}
+										}
+									],
+									"sid": 162426286486211
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 918710512626155,
+											"parameters": {
+												"instance-variable": "NextFId",
+												"value": "BestID"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 542682044082169,
+											"parameters": {
+												"variable": "BestDinstance",
+												"value": "999999"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 179768419241231,
+											"parameters": {
+												"variable": "BestID",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 639754109846875
 								}
 							]
 						}
@@ -339,6 +553,581 @@
 				}
 			],
 			"sid": 161173091543951
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DETAILS GENERATION",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 264949020588831,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 187959861897871,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Cell",
+									"sid": 305743745388845,
+									"parameters": {
+										"instance-variable": "ConfigType",
+										"comparison": 0,
+										"value": "\"start\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Cell",
+									"sid": 157733314296669,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"empty\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 931492343644594,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 668887418485237,
+											"parameters": {
+												"object": "Cell"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 555937832953212,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"reserved\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Cell",
+											"sid": 908041557191900,
+											"parameters": {
+												"animation": "\"reserved\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Base",
+											"sid": 674603140274179,
+											"parameters": {
+												"object": "Detail",
+												"layer": "2",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 416203619210975,
+											"parameters": {
+												"instance-variable": "TargetCellId",
+												"value": "Cell.UID"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Detail",
+											"sid": 510703208361154,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"MoveToCell\"",
+												"property": "position",
+												"end-x": "Cell.X",
+												"end-y": "Cell.Y",
+												"time": "1",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 897679961696190
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Detail",
+							"sid": 132270929639869,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"MoveToCell\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Detail",
+							"sid": 130248643844629,
+							"parameters": {
+								"instance-variable": "CurrentCellId",
+								"value": "Detail.TargetCellId"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Detail",
+							"sid": 320991410725393,
+							"parameters": {
+								"instance-variable": "TargetCellId",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 301771485511605,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 849117214708444,
+									"parameters": {
+										"object": "Cell",
+										"expression": "Cell.UID = Detail.CurrentCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 735796632335192,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"occupied\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 523803134196763,
+									"parameters": {
+										"animation": "\"occupied\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 556359307550180
+						}
+					]
+				}
+			],
+			"sid": 978164368572876
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DETAILS MOVING FORWARD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "NextCellId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 594489655362202
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 820903802342832,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Detail",
+							"sid": 797029839751185,
+							"parameters": {
+								"instance-variable": "CurrentCellId",
+								"comparison": 1,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Detail",
+							"sid": 942869649298304,
+							"parameters": {
+								"instance-variable": "TargetCellId",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 768629863848465,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 703657501217984,
+									"parameters": {
+										"object": "Detail"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 437735425917686,
+									"parameters": {
+										"variable": "NextCellId",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 493147916298427,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 740304470037783,
+											"parameters": {
+												"object": "Cell",
+												"expression": "Cell.UID = Detail.CurrentCellId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 434557120729037,
+											"parameters": {
+												"instance-variable": "NextACellId",
+												"value": "Cell.NextAId"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 353390006158849,
+											"parameters": {
+												"instance-variable": "NextBCellId",
+												"value": "Cell.NextBId"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 468799995196508,
+											"parameters": {
+												"instance-variable": "NextFCellId",
+												"value": "Cell.NextFId"
+											}
+										}
+									],
+									"sid": 659094011163121
+								},
+								{
+									"eventType": "comment",
+									"text": "First try a-direction"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 333672497550489,
+											"parameters": {
+												"instance-variable": "NextACellId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 915961141176420,
+											"parameters": {
+												"object": "Cell",
+												"expression": "Cell.UID = Detail.NextACellId"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Cell",
+											"sid": 810886135997660,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"empty\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 926855883078369,
+											"parameters": {
+												"variable": "NextCellId",
+												"value": "Detail.NextACellId"
+											}
+										}
+									],
+									"sid": 986503994951243
+								},
+								{
+									"eventType": "comment",
+									"text": "Then try b-direction"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 371318773177386,
+											"parameters": {
+												"variable": "NextCellId",
+												"comparison": 0,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 574959370309937,
+											"parameters": {
+												"instance-variable": "NextBCellId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 229889617551332,
+											"parameters": {
+												"object": "Cell",
+												"expression": "Cell.UID = Detail.NextBCellId"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Cell",
+											"sid": 334784398044615,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"empty\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 846346703884477,
+											"parameters": {
+												"variable": "NextCellId",
+												"value": "Detail.NextBCellId"
+											}
+										}
+									],
+									"sid": 487967319059680
+								},
+								{
+									"eventType": "comment",
+									"text": "Then try f-direction"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 200557932989169,
+											"parameters": {
+												"variable": "NextCellId",
+												"comparison": 0,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 407008148692324,
+											"parameters": {
+												"instance-variable": "NextFCellId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 358455485926524,
+											"parameters": {
+												"object": "Cell",
+												"expression": "Cell.UID = Detail.NextFCellId"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Cell",
+											"sid": 837303101979945,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"empty\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 850645801839648,
+											"parameters": {
+												"variable": "NextCellId",
+												"value": "Detail.NextFCellId"
+											}
+										}
+									],
+									"sid": 577550378094975
+								},
+								{
+									"eventType": "comment",
+									"text": "The direction has been found"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 221327010485566,
+											"parameters": {
+												"variable": "NextCellId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "pick-by-evaluate",
+											"objectClass": "System",
+											"sid": 926779951691590,
+											"parameters": {
+												"object": "Cell",
+												"expression": "Cell.UID = NextCellId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 684736374522584,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"reserved\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Cell",
+											"sid": 449698734043554,
+											"parameters": {
+												"animation": "\"reserved\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 521258986370150,
+											"parameters": {
+												"instance-variable": "TargetCellId",
+												"value": "NextCellId"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "Detail",
+											"sid": 520553340850415,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"MoveToCell\"",
+												"property": "position",
+												"end-x": "Cell.X",
+												"end-y": "Cell.Y",
+												"time": "5",
+												"ease": "noease",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 632416841057605
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 217216854386661
 		}
 	],
 	"sid": 186625743260119

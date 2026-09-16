@@ -1,0 +1,82 @@
+{
+	"name": "Detail",
+	"plugin-id": "Sprite",
+	"sid": 208202606095555,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "TargetCellId",
+			"type": "number",
+			"desc": "Target Cell to move",
+			"show": true,
+			"sid": 796007562307244
+		},
+		{
+			"name": "CurrentCellId",
+			"type": "number",
+			"desc": "Current cell which reserved, then occupied by detail",
+			"show": true,
+			"sid": 478832411411150
+		},
+		{
+			"name": "NextACellId",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 407939874610077
+		},
+		{
+			"name": "NextFCellId",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 320840266201892
+		},
+		{
+			"name": "NextBCellId",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 760076150620697
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 759137238759795
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 60,
+						"height": 60,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7273183,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 859802776338969,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
