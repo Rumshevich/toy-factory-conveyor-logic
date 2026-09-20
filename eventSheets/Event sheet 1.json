@@ -658,10 +658,10 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Detail",
-											"sid": 510703208361154,
+											"sid": 726711939655072,
 											"behaviorType": "Tween",
 											"parameters": {
-												"tags": "\"MoveToCell\"",
+												"tags": "\"EnterConveyor\"",
 												"property": "position",
 												"end-x": "Cell.X",
 												"end-y": "Cell.Y",
@@ -686,10 +686,10 @@
 						{
 							"id": "on-tweens-finished",
 							"objectClass": "Detail",
-							"sid": 132270929639869,
+							"sid": 942029569132795,
 							"behaviorType": "Tween",
 							"parameters": {
-								"tags": "\"MoveToCell\""
+								"tags": "\"EnterConveyor\""
 							}
 						}
 					],
@@ -1104,14 +1104,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Detail",
-											"sid": 520553340850415,
+											"sid": 507265472700342,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"MoveToCell\"",
 												"property": "position",
 												"end-x": "Cell.X",
 												"end-y": "Cell.Y",
-												"time": "5",
+												"time": "1",
 												"ease": "noease",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -1123,6 +1123,119 @@
 									"sid": 632416841057605
 								}
 							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Detail",
+							"sid": 973864462572707,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"MoveToCell\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 462151647000103,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 158741903291141,
+									"parameters": {
+										"object": "Cell",
+										"expression": "Cell.UID = Detail.CurrentCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 820753617556755,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 577399917648948,
+									"parameters": {
+										"animation": "\"empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 645787676350522
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 969316703732215,
+									"parameters": {
+										"object": "Cell",
+										"expression": "Cell.UID = Detail.TargetCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 217818189927406,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"occupied\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 270056936117112,
+									"parameters": {
+										"animation": "\"occupied\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 644907901524479
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 267396864185163,
+									"parameters": {
+										"instance-variable": "CurrentCellId",
+										"value": "Detail.TargetCellId"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 995397295722984,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 938051978559822
 						}
 					]
 				}
