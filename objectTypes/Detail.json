@@ -20,25 +20,32 @@
 			"sid": 478832411411150
 		},
 		{
-			"name": "NextACellId",
+			"name": "NextAId",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 407939874610077
 		},
 		{
-			"name": "NextFCellId",
+			"name": "NextFId",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 320840266201892
 		},
 		{
-			"name": "NextBCellId",
+			"name": "NextBId",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 760076150620697
+		},
+		{
+			"name": "DetailType",
+			"type": "string",
+			"desc": "enum: [head, body, top_left_paw, top_right_paw, bottom_left_paw, bottom-right-paw]",
+			"show": true,
+			"sid": 274814156423070
 		}
 	],
 	"behaviorTypes": [
@@ -46,6 +53,11 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 759137238759795
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 879787860139553
 		}
 	],
 	"effectTypes": [],
