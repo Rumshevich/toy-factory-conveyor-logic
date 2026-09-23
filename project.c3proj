@@ -44,11 +44,11 @@
 			"Cell",
 			"Detail",
 			"HeadGraphic",
-			"Body",
-			"TopLeftPaw",
-			"TopRightPaw",
-			"BottomRightPaw",
-			"BottomLeftPaw"
+			"BodyGraphic",
+			"TopLeftPawGraphic",
+			"TopRightPawGraphic",
+			"BottomRightPawGraphic",
+			"BottomLeftPawGraphic"
 		],
 		"subfolders": []
 	},

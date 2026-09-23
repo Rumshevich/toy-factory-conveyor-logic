@@ -3460,7 +3460,7 @@
 					}
 				},
 				{
-					"type": "Body",
+					"type": "BodyGraphic",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3476,12 +3476,6 @@
 						"Pin": {
 							"properties": {
 								"destroy": false
-							}
-						},
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
 							}
 						}
 					},
@@ -3505,7 +3499,7 @@
 					}
 				},
 				{
-					"type": "TopLeftPaw",
+					"type": "TopLeftPawGraphic",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3544,7 +3538,7 @@
 					}
 				},
 				{
-					"type": "TopRightPaw",
+					"type": "TopRightPawGraphic",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3583,7 +3577,7 @@
 					}
 				},
 				{
-					"type": "BottomRightPaw",
+					"type": "BottomRightPawGraphic",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3622,7 +3616,7 @@
 					}
 				},
 				{
-					"type": "BottomLeftPaw",
+					"type": "BottomLeftPawGraphic",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

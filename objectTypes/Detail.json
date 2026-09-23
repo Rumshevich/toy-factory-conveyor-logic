@@ -43,7 +43,7 @@
 		{
 			"name": "DetailType",
 			"type": "string",
-			"desc": "enum: [head, body, top_left_paw, top_right_paw, bottom_left_paw, bottom-right-paw]",
+			"desc": "enum: [head, body, top_left_paw, top_right_paw, bottom_left_paw, bottom_right_paw]",
 			"show": true,
 			"sid": 274814156423070
 		}

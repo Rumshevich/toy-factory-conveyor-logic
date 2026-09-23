@@ -1,5 +1,5 @@
 {
-	"name": "Body",
+	"name": "BodyGraphic",
 	"plugin-id": "Sprite",
 	"sid": 496804265949069,
 	"isGlobal": false,
@@ -10,11 +10,6 @@
 			"behaviorId": "Pin",
 			"name": "Pin",
 			"sid": 999490530307557
-		},
-		{
-			"behaviorId": "DragnDrop",
-			"name": "DragDrop",
-			"sid": 487426531120573
 		}
 	],
 	"effectTypes": [],

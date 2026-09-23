@@ -751,7 +751,7 @@
 													"objectClass": "System",
 													"sid": 358886766605908,
 													"parameters": {
-														"object-to-create": "Body",
+														"object-to-create": "BodyGraphic",
 														"layer": "\"Graphics\"",
 														"x": "Detail.X",
 														"y": "Detail.Y",
@@ -761,7 +761,7 @@
 												},
 												{
 													"id": "pin-to-object-properties",
-													"objectClass": "Body",
+													"objectClass": "BodyGraphic",
 													"sid": 416070375425124,
 													"behaviorType": "Pin",
 													"parameters": {
@@ -797,7 +797,7 @@
 													"objectClass": "System",
 													"sid": 989726248179017,
 													"parameters": {
-														"object-to-create": "TopRightPaw",
+														"object-to-create": "TopRightPawGraphic",
 														"layer": "\"Graphics\"",
 														"x": "Detail.X",
 														"y": "Detail.Y",
@@ -807,7 +807,7 @@
 												},
 												{
 													"id": "pin-to-object-properties",
-													"objectClass": "TopRightPaw",
+													"objectClass": "TopRightPawGraphic",
 													"sid": 178070288849829,
 													"behaviorType": "Pin",
 													"parameters": {
@@ -843,7 +843,7 @@
 													"objectClass": "System",
 													"sid": 606922051440326,
 													"parameters": {
-														"object-to-create": "TopLeftPaw",
+														"object-to-create": "TopLeftPawGraphic",
 														"layer": "\"Graphics\"",
 														"x": "Detail.X",
 														"y": "Detail.Y",
@@ -853,7 +853,7 @@
 												},
 												{
 													"id": "pin-to-object-properties",
-													"objectClass": "TopLeftPaw",
+													"objectClass": "TopLeftPawGraphic",
 													"sid": 623044790883240,
 													"behaviorType": "Pin",
 													"parameters": {
@@ -889,7 +889,7 @@
 													"objectClass": "System",
 													"sid": 566778906079385,
 													"parameters": {
-														"object-to-create": "BottomLeftPaw",
+														"object-to-create": "BottomLeftPawGraphic",
 														"layer": "\"Graphics\"",
 														"x": "Detail.X",
 														"y": "Detail.Y",
@@ -899,7 +899,7 @@
 												},
 												{
 													"id": "pin-to-object-properties",
-													"objectClass": "BottomLeftPaw",
+													"objectClass": "BottomLeftPawGraphic",
 													"sid": 605475963984676,
 													"behaviorType": "Pin",
 													"parameters": {
@@ -935,7 +935,7 @@
 													"objectClass": "System",
 													"sid": 303333787355354,
 													"parameters": {
-														"object-to-create": "BottomRightPaw",
+														"object-to-create": "BottomRightPawGraphic",
 														"layer": "\"Graphics\"",
 														"x": "Detail.X",
 														"y": "Detail.Y",
@@ -945,7 +945,7 @@
 												},
 												{
 													"id": "pin-to-object-properties",
-													"objectClass": "BottomRightPaw",
+													"objectClass": "BottomRightPawGraphic",
 													"sid": 583107828825872,
 													"behaviorType": "Pin",
 													"parameters": {
