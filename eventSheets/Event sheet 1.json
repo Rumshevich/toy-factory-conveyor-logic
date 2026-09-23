@@ -637,13 +637,22 @@
 										{
 											"id": "spawn-another-object",
 											"objectClass": "Base",
-											"sid": 674603140274179,
+											"sid": 519554064673247,
 											"parameters": {
 												"object": "Detail",
-												"layer": "2",
+												"layer": "\"Details\"",
 												"image-point": "0",
 												"create-hierarchy": false,
 												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 575730848925849,
+											"parameters": {
+												"instance-variable": "DetailType",
+												"value": "choose(\"head\", \"body\", \"top_left_paw\", \"top_right_paw\", \"bottom_left_paw\", \"bottom_right_paw\")"
 											}
 										},
 										{
@@ -674,7 +683,285 @@
 											}
 										}
 									],
-									"sid": 897679961696190
+									"sid": 897679961696190,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 583773810998369,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"head\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 203831626062039,
+													"parameters": {
+														"object-to-create": "HeadGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "HeadGraphic",
+													"sid": 370954446212380,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 333948807972023
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 509848452831767,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"body\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 358886766605908,
+													"parameters": {
+														"object-to-create": "BodyGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "BodyGraphic",
+													"sid": 416070375425124,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 946858253787174
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 368480641373502,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"top_right_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 989726248179017,
+													"parameters": {
+														"object-to-create": "TopRightPawGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "TopRightPawGraphic",
+													"sid": 178070288849829,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 464815787865970
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 315722689490519,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"top_left_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 606922051440326,
+													"parameters": {
+														"object-to-create": "TopLeftPawGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "TopLeftPawGraphic",
+													"sid": 623044790883240,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 505543695028757
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 453453550766209,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"bottom_left_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 566778906079385,
+													"parameters": {
+														"object-to-create": "BottomLeftPawGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "BottomLeftPawGraphic",
+													"sid": 605475963984676,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 159863416431726
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Detail",
+													"sid": 444414129447504,
+													"parameters": {
+														"instance-variable": "DetailType",
+														"comparison": 0,
+														"value": "\"bottom_right_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 303333787355354,
+													"parameters": {
+														"object-to-create": "BottomRightPawGraphic",
+														"layer": "\"Graphics\"",
+														"x": "Detail.X",
+														"y": "Detail.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "BottomRightPawGraphic",
+													"sid": 583107828825872,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "Detail",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												}
+											],
+											"sid": 136528198774384
+										}
+									]
 								}
 							]
 						}
@@ -851,7 +1138,7 @@
 											"objectClass": "Detail",
 											"sid": 434557120729037,
 											"parameters": {
-												"instance-variable": "NextACellId",
+												"instance-variable": "NextAId",
 												"value": "Cell.NextAId"
 											}
 										},
@@ -860,7 +1147,7 @@
 											"objectClass": "Detail",
 											"sid": 353390006158849,
 											"parameters": {
-												"instance-variable": "NextBCellId",
+												"instance-variable": "NextBId",
 												"value": "Cell.NextBId"
 											}
 										},
@@ -869,7 +1156,7 @@
 											"objectClass": "Detail",
 											"sid": 468799995196508,
 											"parameters": {
-												"instance-variable": "NextFCellId",
+												"instance-variable": "NextFId",
 												"value": "Cell.NextFId"
 											}
 										}
@@ -888,7 +1175,7 @@
 											"objectClass": "Detail",
 											"sid": 333672497550489,
 											"parameters": {
-												"instance-variable": "NextACellId",
+												"instance-variable": "NextAId",
 												"comparison": 1,
 												"value": "-1"
 											}
@@ -899,7 +1186,7 @@
 											"sid": 915961141176420,
 											"parameters": {
 												"object": "Cell",
-												"expression": "Cell.UID = Detail.NextACellId"
+												"expression": "Cell.UID = Detail.NextAId"
 											}
 										},
 										{
@@ -920,7 +1207,7 @@
 											"sid": 926855883078369,
 											"parameters": {
 												"variable": "NextCellId",
-												"value": "Detail.NextACellId"
+												"value": "Detail.NextAId"
 											}
 										}
 									],
@@ -948,7 +1235,7 @@
 											"objectClass": "Detail",
 											"sid": 574959370309937,
 											"parameters": {
-												"instance-variable": "NextBCellId",
+												"instance-variable": "NextBId",
 												"comparison": 1,
 												"value": "-1"
 											}
@@ -959,7 +1246,7 @@
 											"sid": 229889617551332,
 											"parameters": {
 												"object": "Cell",
-												"expression": "Cell.UID = Detail.NextBCellId"
+												"expression": "Cell.UID = Detail.NextBId"
 											}
 										},
 										{
@@ -980,7 +1267,7 @@
 											"sid": 846346703884477,
 											"parameters": {
 												"variable": "NextCellId",
-												"value": "Detail.NextBCellId"
+												"value": "Detail.NextBId"
 											}
 										}
 									],
@@ -1008,7 +1295,7 @@
 											"objectClass": "Detail",
 											"sid": 407008148692324,
 											"parameters": {
-												"instance-variable": "NextFCellId",
+												"instance-variable": "NextFId",
 												"comparison": 1,
 												"value": "-1"
 											}
@@ -1019,7 +1306,7 @@
 											"sid": 358455485926524,
 											"parameters": {
 												"object": "Cell",
-												"expression": "Cell.UID = Detail.NextFCellId"
+												"expression": "Cell.UID = Detail.NextFId"
 											}
 										},
 										{
@@ -1040,7 +1327,7 @@
 											"sid": 850645801839648,
 											"parameters": {
 												"variable": "NextCellId",
-												"value": "Detail.NextFCellId"
+												"value": "Detail.NextFId"
 											}
 										}
 									],

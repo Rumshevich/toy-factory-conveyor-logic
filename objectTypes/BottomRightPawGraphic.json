@@ -1,0 +1,70 @@
+{
+	"name": "BottomRightPawGraphic",
+	"plugin-id": "Sprite",
+	"sid": 497615225977050,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 395704280669314
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 60,
+						"height": 60,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 602831,
+						"collisionPoly": {
+							"points": [
+								0.8766666666666667,
+								0.03333333333333333,
+								0.9566666666666667,
+								0.165,
+								1,
+								0.2683333333333333,
+								1,
+								0.4,
+								0.9033333333333333,
+								0.75,
+								0.775,
+								0.9166666666666666,
+								0.68,
+								0.9816666666666667,
+								0.021666666666666667,
+								0.6166666666666667,
+								0.075,
+								0.28833333333333333,
+								0.54,
+								0.09166666666666666
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 441881092434980,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -15,6 +15,20 @@
 		},
 		{
 			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -28,7 +42,13 @@
 			"Base",
 			"Stopper",
 			"Cell",
-			"Detail"
+			"Detail",
+			"HeadGraphic",
+			"BodyGraphic",
+			"TopLeftPawGraphic",
+			"TopRightPawGraphic",
+			"BottomRightPawGraphic",
+			"BottomLeftPawGraphic"
 		],
 		"subfolders": []
 	},
