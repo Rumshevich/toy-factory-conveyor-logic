@@ -665,6 +665,33 @@
 											}
 										},
 										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 297061336984441,
+											"parameters": {
+												"instance-variable": "AssemblyState",
+												"value": "\"free\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 576133403107464,
+											"parameters": {
+												"instance-variable": "ToyType",
+												"value": "\"teddy_bear\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 966780593335570,
+											"parameters": {
+												"instance-variable": "DetailColor",
+												"value": "\"blue\""
+											}
+										},
+										{
 											"id": "tween-two-properties",
 											"objectClass": "Detail",
 											"sid": 726711939655072,
@@ -686,6 +713,7 @@
 									"sid": 897679961696190,
 									"children": [
 										{
+											"bookmark": true,
 											"eventType": "block",
 											"conditions": [
 												{
@@ -726,6 +754,15 @@
 														"width-type": "no",
 														"height-type": "no",
 														"z": false
+													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "HeadGraphic",
+													"sid": 482083400558687,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
 													}
 												}
 											],
@@ -773,6 +810,15 @@
 														"height-type": "no",
 														"z": false
 													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "BodyGraphic",
+													"sid": 617061287768839,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
+													}
 												}
 											],
 											"sid": 946858253787174
@@ -818,6 +864,15 @@
 														"width-type": "no",
 														"height-type": "no",
 														"z": false
+													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "TopRightPawGraphic",
+													"sid": 563256159442318,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
 													}
 												}
 											],
@@ -865,6 +920,15 @@
 														"height-type": "no",
 														"z": false
 													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "TopLeftPawGraphic",
+													"sid": 548612816501640,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
+													}
 												}
 											],
 											"sid": 505543695028757
@@ -911,6 +975,15 @@
 														"height-type": "no",
 														"z": false
 													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "BottomLeftPawGraphic",
+													"sid": 160882998857825,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
+													}
 												}
 											],
 											"sid": 159863416431726
@@ -956,6 +1029,15 @@
 														"width-type": "no",
 														"height-type": "no",
 														"z": false
+													}
+												},
+												{
+													"id": "set-destroy",
+													"objectClass": "BottomRightPawGraphic",
+													"sid": 954025303963168,
+													"behaviorType": "Pin",
+													"parameters": {
+														"destroy": true
 													}
 												}
 											],
@@ -1528,6 +1610,599 @@
 				}
 			],
 			"sid": 217216854386661
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ASSEMBLY",
+			"description": "Assembly of toys",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "DraggedDetailId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 462403864199802
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorDetailId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 639596090628372
+				},
+				{
+					"eventType": "variable",
+					"name": "AssemblyDropTolerance",
+					"type": "number",
+					"initialValue": "0.5",
+					"comment": "A constant representing the distance between the centers of two details.",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 545655119762614
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedDetailType",
+					"type": "string",
+					"initialValue": "\"\"",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 932972371658399
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorDetailType",
+					"type": "string",
+					"initialValue": "\"\"",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 635384797352818
+				},
+				{
+					"eventType": "variable",
+					"name": "IsAssemblyAllowed",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "Checking if assembly is allowed",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 432145081207955
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedToyType",
+					"type": "string",
+					"initialValue": "\"\"",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 747900083406451
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Detail",
+							"sid": 219762892567540,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 532549446784882,
+							"parameters": {
+								"variable": "IsAssemblyAllowed",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 339586048977897,
+							"parameters": {
+								"variable": "DraggedDetailId",
+								"value": "Detail.UID"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 176217229928089,
+							"parameters": {
+								"variable": "DraggedDetailType",
+								"value": "Detail.DetailType"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 550640185957482,
+							"parameters": {
+								"variable": "DraggedToyType",
+								"value": "Detail.ToyType"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 358288706054824,
+							"parameters": {
+								"variable": "AnchorDetailId",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 952137518967339,
+							"parameters": {
+								"variable": "AnchorDetailType",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 235016029036104,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 440295224225070,
+									"parameters": {
+										"object": "DetailCandidates",
+										"expression": "DetailCandidates.UID",
+										"comparison": 1,
+										"value": "DraggedDetailId"
+									}
+								},
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 857342761892048,
+									"parameters": {
+										"object": "DetailCandidates",
+										"expression": "distance(Detail.X, Detail.Y, DetailCandidates.X, DetailCandidates.Y) <= Detail.Width * AssemblyDropTolerance"
+									}
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "DetailCandidates",
+									"sid": 818525269003938,
+									"parameters": {
+										"which": "nearest",
+										"x": "Detail.X",
+										"y": "Detail.Y",
+										"z": "0",
+										"pick-all-tied": false
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 127603118587946,
+									"parameters": {
+										"variable": "AnchorDetailId",
+										"value": "DetailCandidates.UID"
+									}
+								}
+							],
+							"sid": 370930092369793
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 701664832490567,
+									"parameters": {
+										"object": "Detail"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Detail",
+									"sid": 989588145222750,
+									"parameters": {
+										"unique-id": "AnchorDetailId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 628852200315679,
+									"parameters": {
+										"variable": "AnchorDetailType",
+										"value": "Detail.DetailType"
+									}
+								}
+							],
+							"sid": 411173693397603,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 348615800520144,
+											"parameters": {
+												"variable": "AnchorDetailId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 431866672400063,
+											"parameters": {
+												"variable": "AnchorDetailType",
+												"comparison": 0,
+												"value": "\"body\""
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 391420557050963,
+											"parameters": {
+												"variable": "DraggedDetailType",
+												"comparison": 1,
+												"value": "\"body\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 433888778992186,
+											"parameters": {
+												"instance-variable": "ToyType",
+												"comparison": 0,
+												"value": "DraggedToyType"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 586995406323252,
+											"parameters": {
+												"variable": "IsAssemblyAllowed",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 214028292945778
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 290697612537463,
+									"parameters": {
+										"variable": "IsAssemblyAllowed"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 534398012030879,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 867220242421332,
+											"parameters": {
+												"object": "Detail"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Detail",
+											"sid": 368664692910005,
+											"parameters": {
+												"unique-id": "AnchorDetailId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 151446505729319,
+											"parameters": {
+												"instance-variable": "AssemblyState",
+												"value": "\"in_progress\""
+											}
+										}
+									],
+									"sid": 419687070306169,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 511615850011160,
+													"parameters": {
+														"variable": "DraggedDetailType",
+														"comparison": 0,
+														"value": "\"head\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Detail",
+													"sid": 854327390044043,
+													"parameters": {
+														"instance-variable": "HasHead",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 181504870555586
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 244968461477557,
+													"parameters": {
+														"variable": "DraggedDetailType",
+														"comparison": 0,
+														"value": "\"top_right_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Detail",
+													"sid": 405530661309030,
+													"parameters": {
+														"instance-variable": "HasTopRightPaw",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 395247109756200
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 978062483441432,
+													"parameters": {
+														"variable": "DraggedDetailType",
+														"comparison": 0,
+														"value": "\"top_left_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Detail",
+													"sid": 995056192976125,
+													"parameters": {
+														"instance-variable": "HasTopLeftPaw",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 599599784767604
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 241429552790621,
+													"parameters": {
+														"variable": "DraggedDetailType",
+														"comparison": 0,
+														"value": "\"bottom_right_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Detail",
+													"sid": 120465862630604,
+													"parameters": {
+														"instance-variable": "HasBottomRightPaw",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 203522818347211
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 766401352548882,
+													"parameters": {
+														"variable": "DraggedDetailType",
+														"comparison": 0,
+														"value": "\"bottom_left_paw\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Detail",
+													"sid": 405790863144194,
+													"parameters": {
+														"instance-variable": "HasBottomLeftPaw",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 621249921164241
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 915381198472325,
+													"parameters": {
+														"object": "Detail"
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Detail",
+													"sid": 282701666043683,
+													"parameters": {
+														"unique-id": "DraggedDetailId"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 990454447898846,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Cell",
+															"sid": 213582926796738,
+															"parameters": {
+																"unique-id": "Detail.CurrentCellId"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Cell",
+															"sid": 629260447494289,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"empty\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Cell",
+															"sid": 372700322590598,
+															"parameters": {
+																"animation": "\"empty\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 760926929913884
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Detail",
+															"sid": 996775485384738,
+															"parameters": {
+																"instance-variable": "TargetCellId",
+																"comparison": 1,
+																"value": "-1"
+															}
+														},
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Cell",
+															"sid": 431920384166392,
+															"parameters": {
+																"unique-id": "Detail.TargetCellId"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Cell",
+															"sid": 730064914882341,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"empty\""
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "Cell",
+															"sid": 899499465027743,
+															"parameters": {
+																"animation": "\"empty\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 922156897082429
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "Detail",
+															"sid": 519396094821261
+														}
+													],
+													"sid": 266637731615453
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 364044051292251
 		}
 	],
 	"sid": 186625743260119

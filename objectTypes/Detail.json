@@ -46,6 +46,62 @@
 			"desc": "enum: [head, body, top_left_paw, top_right_paw, bottom_left_paw, bottom_right_paw]",
 			"show": true,
 			"sid": 274814156423070
+		},
+		{
+			"name": "ToyType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 335404322138115
+		},
+		{
+			"name": "AssemblyState",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 648879539489372
+		},
+		{
+			"name": "DetailColor",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 980011287165555
+		},
+		{
+			"name": "HasHead",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 903969578648044
+		},
+		{
+			"name": "HasTopRightPaw",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 520263096614896
+		},
+		{
+			"name": "HasTopLeftPaw",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 529759455493315
+		},
+		{
+			"name": "HasBottomRightPaw",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 395721150248314
+		},
+		{
+			"name": "HasBottomLeftPaw",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 870078198405210
 		}
 	],
 	"behaviorTypes": [
@@ -58,6 +114,11 @@
 			"behaviorId": "DragnDrop",
 			"name": "DragDrop",
 			"sid": 879787860139553
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 709217358227239
 		}
 	],
 	"effectTypes": [],
@@ -66,8 +127,8 @@
 			{
 				"frames": [
 					{
-						"width": 60,
-						"height": 60,
+						"width": 300,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
