@@ -2203,6 +2203,34 @@
 				}
 			],
 			"sid": 364044051292251
+		},
+		{
+			"functionName": "Test_GetVisibleObjects",
+			"functionDescription": "Служебная функция для автоматических тестов. Только читает координаты объектов; игровой процесс не меняет.",
+			"functionCategory": "Testing",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "script",
+					"language": "javascript",
+					"script": [
+						"const toScreen = instance => {",
+						"\tconst [x, y] = instance.layer.layerToCssPx(instance.x, instance.y);",
+						"\treturn { uid: instance.uid, x, y };",
+						"};",
+						"runtime.setReturnValue(JSON.stringify({",
+						"\tdetails: runtime.objects.Detail.getAllInstances().map(toScreen),",
+						"\tbodies: runtime.objects.BodyGraphic.getAllInstances().map(toScreen)",
+						"}));"
+					]
+				}
+			],
+			"sid": 721348992435100
 		}
 	],
 	"sid": 186625743260119
