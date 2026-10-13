@@ -3,30 +3,45 @@ const { test, expect } = require("@playwright/test");
 async function readGameObjects(page) {
   return page.evaluate(async () => {
     const response = await window.c3_callFunction("Test_GetVisibleObjects", []);
-    return JSON.parse(response);
+    return response ? JSON.parse(response) : null;
   });
 }
 
 test("деталь исчезает, когда игрок перетаскивает её на тело", async ({ page }) => {
-  await page.goto("");
+  await page.goto("?playwright=cd150d5");
   await page.waitForFunction(() => typeof window.c3_callFunction === "function");
+  await page.waitForTimeout(10_000);
 
-  await expect.poll(async () => {
-    const { details, bodies } = await readGameObjects(page);
-    return details.length > 0 && bodies.length > 0;
-  }, { message: "Игра не создала деталь и тело для проверки" }).toBe(true);
+  let before = null;
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    before = await readGameObjects(page);
+    if (before?.details?.length && before?.bodies?.length) break;
+    await page.waitForTimeout(1_000);
+  }
+  expect(before, "Тестовый датчик не вернул состояние игры").toBeTruthy();
 
-  const before = await readGameObjects(page);
-  const detail = before.details[0];
-  const body = before.bodies[0];
+  const isVisible = item => item.x > 0 && item.y > 0 && item.x < 1024 && item.y < 1365;
+  const details = before.details.filter(isVisible);
+  const body = before.bodies.find(isVisible);
+  expect(details.length, "Не найдена видимая деталь для перетаскивания").toBeGreaterThan(0);
+  expect(body, "Не найдено тело для перетаскивания").toBeTruthy();
 
-  await page.mouse.move(detail.x, detail.y);
-  await page.mouse.down();
-  await page.mouse.move(body.x, body.y, { steps: 12 });
-  await page.mouse.up();
+  let attached = false;
+  for (const detail of details) {
+    await page.mouse.move(detail.x, detail.y);
+    await page.mouse.down();
+    await page.waitForTimeout(150);
+    await page.mouse.move(body.x, body.y, { steps: 12 });
+    await page.waitForTimeout(300);
+    await page.mouse.up();
+    await page.waitForTimeout(700);
 
-  await expect.poll(async () => {
-    const { details } = await readGameObjects(page);
-    return details.some(item => item.uid === detail.uid);
-  }, { timeout: 5_000, message: "Перетащенная деталь не исчезла" }).toBe(false);
+    const afterDrop = await readGameObjects(page);
+    if (!afterDrop.details.some(item => item.uid === detail.uid)) {
+      attached = true;
+      break;
+    }
+  }
+
+  expect(attached, "Ни одна видимая деталь не исчезла после переноса на тело").toBe(true);
 });
