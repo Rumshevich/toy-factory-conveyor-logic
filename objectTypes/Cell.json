@@ -48,8 +48,8 @@
 			{
 				"frames": [
 					{
-						"width": 60,
-						"height": 60,
+						"width": 300,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -121,8 +121,8 @@
 			{
 				"frames": [
 					{
-						"width": 60,
-						"height": 60,
+						"width": 300,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -194,8 +194,8 @@
 			{
 				"frames": [
 					{
-						"width": 60,
-						"height": 60,
+						"width": 300,
+						"height": 300,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",

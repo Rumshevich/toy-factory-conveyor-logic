@@ -48,7 +48,9 @@
 			"TopLeftPawGraphic",
 			"TopRightPawGraphic",
 			"BottomRightPawGraphic",
-			"BottomLeftPawGraphic"
+			"BottomLeftPawGraphic",
+			"TeddyBear",
+			"Background"
 		],
 		"subfolders": []
 	},
@@ -58,7 +60,8 @@
 	"families": {
 		"items": [
 			"Cells",
-			"CellCandidates"
+			"CellCandidates",
+			"DetailCandidates"
 		],
 		"subfolders": []
 	},
@@ -216,7 +219,7 @@
 			1,
 			0
 		],
-		"orientations": "landscape",
+		"orientations": "portrait",
 		"webgpu": "auto",
 		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
@@ -237,7 +240,7 @@
 		"exportFileStructure": "folders",
 		"scriptsType": "module"
 	},
-	"viewportWidth": 1280,
-	"viewportHeight": 720,
+	"viewportWidth": 2048,
+	"viewportHeight": 2732,
 	"firstLayout": null
 }
