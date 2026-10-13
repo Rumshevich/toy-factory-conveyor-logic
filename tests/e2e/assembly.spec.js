@@ -8,6 +8,11 @@ async function readGameObjects(page) {
 }
 
 test("деталь исчезает, когда игрок перетаскивает её на тело", async ({ page }) => {
+  const browserErrors = [];
+  page.on("pageerror", error => browserErrors.push(`page: ${error.message}`));
+  page.on("console", message => {
+    if (message.type() === "error") browserErrors.push(`console: ${message.text()}`);
+  });
   await page.goto("?playwright=cd150d5");
   await page.waitForFunction(() => typeof window.c3_callFunction === "function");
   await page.waitForTimeout(10_000);
@@ -18,7 +23,7 @@ test("деталь исчезает, когда игрок перетаскив�
     if (before?.details?.length && before?.bodies?.length) break;
     await page.waitForTimeout(1_000);
   }
-  expect(before, "Тестовый датчик не вернул состояние игры").toBeTruthy();
+  expect(before, browserErrors.join("\n") || "Тестовый датчик не вернул состояние игры").toBeTruthy();
 
   const isVisible = item => item.x > 0 && item.y > 0 && item.x < 1024 && item.y < 1365;
   const details = before.details.filter(isVisible);
@@ -37,7 +42,7 @@ test("деталь исчезает, когда игрок перетаскив�
     await page.waitForTimeout(700);
 
     const afterDrop = await readGameObjects(page);
-    if (!afterDrop.details.some(item => item.uid === detail.uid)) {
+    if (!afterDrop?.details?.some(item => item.uid === detail.uid)) {
       attached = true;
       break;
     }

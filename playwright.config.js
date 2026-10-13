@@ -5,6 +5,7 @@ module.exports = defineConfig({
   timeout: 45_000,
   use: {
     baseURL: process.env.TEST_URL || "https://rumshevich.github.io/toy-factory-conveyor-logic/",
+    viewport: { width: 1024, height: 1365 },
     headless: false,
     launchOptions: {
       executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
