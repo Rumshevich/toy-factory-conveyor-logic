@@ -38,7 +38,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.PickByUID,
 		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
-		C3.Plugins.Sprite.Acts.Destroy
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.JavaScriptInEvents.EventSheet1_Event50_Act1
 	];
 };
 self.C3_JsPropNameTable = [
