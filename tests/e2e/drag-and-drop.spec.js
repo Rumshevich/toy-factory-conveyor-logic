@@ -18,7 +18,7 @@ function distance(first, second) {
 }
 
 async function openReadyGame(page) {
-  await page.goto('?build=8fca37d');
+  await page.goto(`?testRun=${Date.now()}`);
   await page.waitForFunction(() => typeof window.c3_callFunction === 'function');
   await page.waitForTimeout(10_000);
 
