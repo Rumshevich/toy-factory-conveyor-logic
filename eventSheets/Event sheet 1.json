@@ -604,6 +604,7 @@
 							"sid": 931492343644594,
 							"children": [
 								{
+									"bookmark": true,
 									"eventType": "block",
 									"conditions": [
 										{
@@ -628,9 +629,9 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Cell",
-											"sid": 908041557191900,
+											"sid": 933436874025865,
 											"parameters": {
-												"animation": "\"reserved\"",
+												"animation": "\"Reserved\"",
 												"from": "beginning"
 											}
 										},
@@ -644,6 +645,24 @@
 												"image-point": "0",
 												"create-hierarchy": false,
 												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 587707937558775,
+											"parameters": {
+												"instance-variable": "CurrentCellId",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 397157647354687,
+											"parameters": {
+												"instance-variable": "PreviousCellId",
+												"value": "-1"
 											}
 										},
 										{
@@ -1060,6 +1079,15 @@
 							"parameters": {
 								"tags": "\"EnterConveyor\""
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Detail",
+							"sid": 411529376261446,
+							"parameters": {
+								"instance-variable": "isDragging"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -1110,9 +1138,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cell",
-									"sid": 523803134196763,
+									"sid": 828162056594245,
 									"parameters": {
-										"animation": "\"occupied\"",
+										"animation": "\"Occupied\"",
 										"from": "beginning"
 									}
 								}
@@ -1145,6 +1173,250 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-drag-start",
+							"objectClass": "Detail",
+							"sid": 224520137052401,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Detail",
+							"sid": 562998239854318,
+							"parameters": {
+								"instance-variable": "isDragging",
+								"value": "true"
+							}
+						},
+						{
+							"id": "stop-tweens",
+							"objectClass": "Detail",
+							"sid": 137459493318589,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"MoveToCell\""
+							}
+						},
+						{
+							"id": "stop-tweens",
+							"objectClass": "Detail",
+							"sid": 490213141410071,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"EnterConveyor\""
+							}
+						}
+					],
+					"sid": 469792995175050,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 629872564713515,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 1,
+										"value": "-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 679969228659002,
+									"parameters": {
+										"instance-variable": "PreviousCellId",
+										"value": "Detail.TargetCellId"
+									}
+								}
+							],
+							"sid": 142059772627342
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 105486262144743,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 0,
+										"value": "-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 494663395815684,
+									"parameters": {
+										"instance-variable": "PreviousCellId",
+										"value": "Detail.CurrentCellId"
+									}
+								}
+							],
+							"sid": 445059189014134
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 993331977032066,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 0,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 932239139133079,
+									"parameters": {
+										"unique-id": "Detail.CurrentCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 886741189407327,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 234408225939359,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 582536151498383
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 218440284781242,
+									"parameters": {
+										"unique-id": "Detail.PreviousCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 727127792335992,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"reserved\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 805550749685489,
+									"parameters": {
+										"animation": "\"Reserved\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 706678578566078
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 530034362146659,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 1,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 801080617456720,
+									"parameters": {
+										"unique-id": "Detail.CurrentCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 136735767573584,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 115231701778181,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 677150634612149
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 386944246501389,
+									"parameters": {
+										"instance-variable": "CurrentCellId",
+										"value": "Detail.PreviousCellId"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 453877809289409,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 682770488604528
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
 							"sid": 820903802342832,
@@ -1171,6 +1443,15 @@
 								"comparison": 0,
 								"value": "-1"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Detail",
+							"sid": 863638425475410,
+							"parameters": {
+								"instance-variable": "isDragging"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -1455,9 +1736,9 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Cell",
-											"sid": 449698734043554,
+											"sid": 146370177068453,
 											"parameters": {
-												"animation": "\"reserved\"",
+												"animation": "\"Reserved\"",
 												"from": "beginning"
 											}
 										},
@@ -1506,6 +1787,15 @@
 							"parameters": {
 								"tags": "\"MoveToCell\""
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Detail",
+							"sid": 457690754622361,
+							"parameters": {
+								"instance-variable": "isDragging"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],
@@ -1537,9 +1827,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cell",
-									"sid": 577399917648948,
+									"sid": 487663533651981,
 									"parameters": {
-										"animation": "\"empty\"",
+										"animation": "\"Empty\"",
 										"from": "beginning"
 									}
 								}
@@ -1572,9 +1862,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cell",
-									"sid": 270056936117112,
+									"sid": 727203890646464,
 									"parameters": {
-										"animation": "\"occupied\"",
+										"animation": "\"Occupied\"",
 										"from": "beginning"
 									}
 								}
@@ -1687,6 +1977,16 @@
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 747900083406451
+				},
+				{
+					"eventType": "variable",
+					"name": "DropCellId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 466350301785364
 				},
 				{
 					"eventType": "block",
@@ -2109,9 +2409,9 @@
 														{
 															"id": "pick-by-unique-id",
 															"objectClass": "Cell",
-															"sid": 213582926796738,
+															"sid": 175766448192825,
 															"parameters": {
-																"unique-id": "Detail.CurrentCellId"
+																"unique-id": "Detail.PreviousCellId"
 															}
 														}
 													],
@@ -2128,9 +2428,9 @@
 														{
 															"id": "set-animation",
 															"objectClass": "Cell",
-															"sid": 372700322590598,
+															"sid": 685748225296806,
 															"parameters": {
-																"animation": "\"empty\"",
+																"animation": "\"Empty\"",
 																"from": "beginning"
 															}
 														}
@@ -2172,9 +2472,9 @@
 														{
 															"id": "set-animation",
 															"objectClass": "Cell",
-															"sid": 899499465027743,
+															"sid": 236164602754778,
 															"parameters": {
-																"animation": "\"empty\"",
+																"animation": "\"Empty\"",
 																"from": "beginning"
 															}
 														}
@@ -2196,6 +2496,349 @@
 											]
 										}
 									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Detail",
+							"sid": 779687054902044,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 877149048937641,
+							"parameters": {
+								"variable": "IsAssemblyAllowed"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 118298880905802,
+							"parameters": {
+								"variable": "DropCellId",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 112310806947267,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Cell",
+									"sid": 578859532527235,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 513926401171394,
+									"parameters": {
+										"object": "Cell",
+										"expression": "distance(Detail.X, Detail.Y, Cell.X, Cell.Y) <= Detail.Width * AssemblyDropTolerance"
+									}
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "Cell",
+									"sid": 115314163494292,
+									"parameters": {
+										"which": "nearest",
+										"x": "Detail.X",
+										"y": "Detail.Y",
+										"z": "0",
+										"pick-all-tied": false
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 662530679210538,
+									"parameters": {
+										"variable": "DropCellId",
+										"value": "Cell.UID"
+									}
+								}
+							],
+							"sid": 588601759665812
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 987925305912697,
+									"parameters": {
+										"variable": "DropCellId",
+										"comparison": 1,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 487172919160903,
+									"parameters": {
+										"object": "Detail"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Detail",
+									"sid": 540407005599057,
+									"parameters": {
+										"unique-id": "DraggedDetailId"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 402459261185177,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Cell",
+											"sid": 538770386102948,
+											"parameters": {
+												"unique-id": "Detail.PreviousCellId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 558058372364905,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"empty\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Cell",
+											"sid": 530297997725810,
+											"parameters": {
+												"animation": "\"Empty\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 888660053743002
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Cell",
+											"sid": 643881063531607,
+											"parameters": {
+												"unique-id": "DropCellId"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Detail",
+											"sid": 508135050993495,
+											"parameters": {
+												"unique-id": "DraggedDetailId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 946816593476627,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"occupied\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Cell",
+											"sid": 102276133181583,
+											"parameters": {
+												"animation": "\"Occupied\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Detail",
+											"sid": 728671629327233,
+											"parameters": {
+												"x": "Cell.X",
+												"y": "Cell.Y"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 364221958381672,
+											"parameters": {
+												"instance-variable": "CurrentCellId",
+												"value": "DropCellId"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 998014729857164,
+											"parameters": {
+												"instance-variable": "TargetCellId",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Detail",
+											"sid": 671853449123399,
+											"parameters": {
+												"instance-variable": "isDragging",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 163676808986557,
+											"parameters": {
+												"instance-variable": "PreviousCellId",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 809969658955826
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 308927710428546,
+									"parameters": {
+										"variable": "DropCellId",
+										"comparison": 0,
+										"value": "-1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 935237207646523,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 153919239063754,
+											"parameters": {
+												"object": "Detail"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Detail",
+											"sid": 846176147268389,
+											"parameters": {
+												"unique-id": "DraggedDetailId"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Cell",
+											"sid": 270994956878276,
+											"parameters": {
+												"unique-id": "Detail.PreviousCellId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Cell",
+											"sid": 218568139357013,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"occupied\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Cell",
+											"sid": 547478289901701,
+											"parameters": {
+												"animation": "\"Occupied\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Detail",
+											"sid": 962739368647884,
+											"parameters": {
+												"x": "Cell.X",
+												"y": "Cell.Y"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 542158217562968,
+											"parameters": {
+												"instance-variable": "TargetCellId",
+												"value": "-1"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Detail",
+											"sid": 711403243532175,
+											"parameters": {
+												"instance-variable": "isDragging",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 441151394724662,
+											"parameters": {
+												"instance-variable": "PreviousCellId",
+												"value": "-1"
+											}
+										}
+									],
+									"sid": 228905647572282
 								}
 							]
 						}

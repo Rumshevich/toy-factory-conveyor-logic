@@ -102,6 +102,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 870078198405210
+		},
+		{
+			"name": "PreviousCellId",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 448622308937564
+		},
+		{
+			"name": "isDragging",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 627150300257978
 		}
 	],
 	"behaviorTypes": [

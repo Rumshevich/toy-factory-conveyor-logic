@@ -20,6 +20,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -53,6 +54,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -122,6 +124,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -191,6 +194,7 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -213,7 +217,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -230,6 +234,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -252,7 +257,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -269,6 +274,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -291,7 +297,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -308,6 +314,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -330,7 +337,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -347,6 +354,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -369,7 +377,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -386,6 +394,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -408,7 +417,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -425,6 +434,7 @@
 						"ConfigType": "start"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -447,7 +457,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -464,6 +474,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -486,7 +497,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -503,6 +514,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -525,7 +537,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -542,6 +554,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -564,7 +577,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -581,6 +594,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -603,7 +617,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -620,6 +634,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -642,7 +657,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -659,6 +674,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -681,7 +697,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -698,6 +714,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -720,7 +737,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -737,6 +754,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -759,7 +777,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -776,6 +794,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -798,7 +817,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -815,6 +834,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -837,7 +857,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -854,6 +874,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -876,7 +897,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -893,6 +914,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -915,7 +937,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -932,6 +954,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -954,7 +977,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -971,6 +994,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -993,7 +1017,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1010,6 +1034,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1032,7 +1057,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1049,6 +1074,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1071,7 +1097,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1088,6 +1114,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1110,7 +1137,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1127,6 +1154,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1149,7 +1177,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1166,6 +1194,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1188,7 +1217,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1205,6 +1234,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1227,7 +1257,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1244,6 +1274,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1266,7 +1297,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1283,6 +1314,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1305,7 +1337,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1322,6 +1354,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1344,7 +1377,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1361,6 +1394,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1383,7 +1417,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1400,6 +1434,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1422,7 +1457,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1439,6 +1474,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1461,7 +1497,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1478,6 +1514,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1500,7 +1537,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1517,6 +1554,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1539,7 +1577,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1556,6 +1594,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1578,7 +1617,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1595,6 +1634,7 @@
 						"ConfigType": ""
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1617,7 +1657,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1634,6 +1674,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1656,7 +1697,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1673,6 +1714,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1695,7 +1737,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1712,6 +1754,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1734,7 +1777,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1751,6 +1794,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1773,7 +1817,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1790,6 +1834,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1812,7 +1857,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1829,6 +1874,7 @@
 						"ConfigType": "end"
 					},
 					"behaviors": {},
+					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -1918,73 +1964,7 @@
 			"name": "Details",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "Detail",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 89,
-					"sid": 567171728143695,
-					"tags": "",
-					"instanceVariables": {
-						"TargetCellId": 0,
-						"CurrentCellId": -1,
-						"NextAId": -1,
-						"NextFId": -1,
-						"NextBId": -1,
-						"DetailType": "\"\"",
-						"ToyType": "\"\"",
-						"AssemblyState": "\"\"",
-						"DetailColor": "\"\"",
-						"HasHead": false,
-						"HasTopRightPaw": false,
-						"HasTopLeftPaw": false,
-						"HasBottomRightPaw": false,
-						"HasBottomLeftPaw": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 732,
-						"y": -270,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.7
-						],
-						"z": 0,
-						"angle": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 314954952826631,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -2023,6 +2003,7 @@
 	"height": 2732,
 	"unboundedScrolling": false,
 	"sampling": "auto",
+	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
