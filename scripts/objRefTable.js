@@ -20,6 +20,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.PickRandom,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.Sprite.Acts.SetOpacity,
 		C3.Plugins.System.Exps.choose,
 		C3.Behaviors.Tween.Acts.TweenTwoProperties,
 		C3.Plugins.Sprite.Exps.X,
@@ -28,18 +29,22 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Pin.Acts.PinByProperties,
 		C3.Behaviors.Pin.Acts.SetDestroy,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
+		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Cnds.PickByEvaluate,
+		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
+		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
+		C3.Behaviors.Tween.Acts.StopTweens,
+		C3.Plugins.Sprite.Cnds.PickByUID,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.System.Cnds.PickByComparison,
 		C3.Plugins.Sprite.Cnds.PickDistance,
 		C3.Plugins.System.Cnds.PickAll,
-		C3.Plugins.Sprite.Cnds.PickByUID,
 		C3.Plugins.System.Cnds.CompareBoolVar,
-		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.JavaScriptInEvents.EventSheet1_Event50_Act1
+		C3.Plugins.Sprite.Acts.SetPos,
+		C3.JavaScriptInEvents.EventSheet1_Event64_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -63,6 +68,8 @@ self.C3_JsPropNameTable = [
 	{HasTopLeftPaw: 0},
 	{HasBottomRightPaw: 0},
 	{HasBottomLeftPaw: 0},
+	{PreviousCellId: 0},
+	{isDragging: 0},
 	{Tween: 0},
 	{DragDrop: 0},
 	{Pin: 0},
@@ -95,7 +102,8 @@ self.C3_JsPropNameTable = [
 	{DraggedDetailType: 0},
 	{AnchorDetailType: 0},
 	{IsAssemblyAllowed: 0},
-	{DraggedToyType: 0}
+	{DraggedToyType: 0},
+	{DropCellId: 0}
 ];
 
 self.InstanceType = {
