@@ -1256,6 +1256,36 @@ const C3=self.C3;C3.JobSchedulerRuntime=class extends C3.DefendedBase{constructo
 // scripts/shaders.js
 {
 self["C3_Shaders"] = {};
+self["C3_Shaders"]["tint"] = {
+	glsl: "varying mediump vec2 vTex;\nuniform lowp sampler2D samplerFront;\nuniform lowp vec3 tintColor;\nvoid main(void)\n{\nlowp vec4 front = texture2D(samplerFront, vTex);\ngl_FragColor = front * vec4(tintColor.r, tintColor.g, tintColor.b, 1.0);\n}",
+	glslWebGL2: "",
+	wgsl: "%%SAMPLERFRONT_BINDING%% var samplerFront : sampler;\n%%TEXTUREFRONT_BINDING%% var textureFront : texture_2d<f32>;\nstruct ShaderParams {\ntintColor : vec3<f32>\n};\n%%SHADERPARAMS_BINDING%% var<uniform> shaderParams : ShaderParams;\n%%FRAGMENTINPUT_STRUCT%%\n%%FRAGMENTOUTPUT_STRUCT%%\n@fragment\nfn main(input : FragmentInput) -> FragmentOutput {\nvar front : vec4<f32> = textureSample(textureFront, samplerFront, input.fragUV);\nvar output : FragmentOutput;\noutput.color = front * vec4<f32>(shaderParams.tintColor, 1.0);\nreturn output;\n}",
+	blendsBackground: false,
+	usesDepth: false,
+	extendBoxHorizontal: 0,
+	extendBoxVertical: 0,
+	crossSampling: false,
+	mustPreDraw: false,
+	preservesOpaqueness: true,
+	supports3dDirectRendering: false,
+	animated: false,
+	parameters: [["tintColor",0,"color"]]
+};
+self["C3_Shaders"]["bulge"] = {
+	glsl: "varying mediump vec2 vTex;\nuniform lowp sampler2D samplerFront;\nuniform mediump vec2 srcOriginStart;\nuniform mediump vec2 srcOriginEnd;\nuniform mediump float radius;\nuniform mediump float scale;\nvoid main(void)\n{\nmediump vec2 srcOriginSize = srcOriginEnd - srcOriginStart;\nmediump vec2 tex = (vTex - srcOriginStart) / srcOriginSize;\nmediump float dist = distance(vec2(0.5, 0.5), tex);\ntex -= vec2(0.5, 0.5);\nif (dist < radius)\n{\nmediump float percent = 1.0 - ((radius - dist) / radius) * scale;\npercent = percent * percent;\ntex = tex * percent;\n}\ntex += vec2(0.5, 0.5);\ntex = clamp(tex, 0.0, 1.0);\t\t\t// ensure no sampling outside source rect\ntex = (tex * srcOriginSize) + srcOriginStart;\t// convert back relative to source rect\ngl_FragColor = texture2D(samplerFront, tex);\n}",
+	glslWebGL2: "",
+	wgsl: "%%SAMPLERFRONT_BINDING%% var samplerFront : sampler;\n%%TEXTUREFRONT_BINDING%% var textureFront : texture_2d<f32>;\nstruct ShaderParams {\nradius : f32,\nscale : f32\n};\n%%SHADERPARAMS_BINDING%% var<uniform> shaderParams : ShaderParams;\n%%C3PARAMS_STRUCT%%\n%%C3_UTILITY_FUNCTIONS%%\n%%FRAGMENTINPUT_STRUCT%%\n%%FRAGMENTOUTPUT_STRUCT%%\n@fragment\nfn main(input : FragmentInput) -> FragmentOutput\n{\nvar tex : vec2<f32> = c3_srcOriginToNorm(input.fragUV);\nvar dist : f32 = distance(vec2<f32>(0.5, 0.5), tex);\ntex = tex - 0.5;\nif (dist < shaderParams.radius)\n{\nvar percent : f32 = 1.0 - ((shaderParams.radius - dist) / shaderParams.radius) * shaderParams.scale;\npercent = percent * percent;\ntex = tex * percent;\n}\ntex = tex + 0.5;\ntex = c3_clamp2(tex, 0.0, 1.0);\t\t// ensure no sampling outside source rect\ntex = c3_normToSrcOrigin(tex);\t\t// convert back relative to source rect\nvar output : FragmentOutput;\noutput.color = textureSample(textureFront, samplerFront, tex);\nreturn output;\n}",
+	blendsBackground: false,
+	usesDepth: false,
+	extendBoxHorizontal: 0,
+	extendBoxVertical: 0,
+	crossSampling: false,
+	mustPreDraw: false,
+	preservesOpaqueness: false,
+	supports3dDirectRendering: false,
+	animated: false,
+	parameters: [["radius",0,"percent"],["scale",0,"percent"]]
+};
 
 }
 
@@ -1480,6 +1510,8 @@ self.C3_ExpressionFuncs = [
 		() => "EnterConveyor",
 		() => "head",
 		() => "Graphics",
+		() => "Tint",
+		() => "Bulge",
 		() => "body",
 		() => "top_right_paw",
 		() => "top_left_paw",
@@ -1514,7 +1546,17 @@ self.C3_ExpressionFuncs = [
 			const n4 = p._GetNode(4);
 			return () => ((C3.distanceTo(n0.ExpObject(), n1.ExpObject(), n2.ExpObject(), n3.ExpObject())) <= ((n4.ExpObject() * 0.5)) ? 1 : 0);
 		},
-		() => "in_progress"
+		() => "in_progress",
+		() => 9886975,
+		() => 0.65,
+		() => 0.18,
+		() => "AssemblyPop",
+		() => 1.12,
+		() => 0.12,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar_Family();
+		}
 ];
 
 

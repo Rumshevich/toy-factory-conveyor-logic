@@ -28,6 +28,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Behaviors.Pin.Acts.PinByProperties,
 		C3.Behaviors.Pin.Acts.SetDestroy,
+		C3.Plugins.Sprite.Acts.SetEffectEnabled,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Cnds.PickByEvaluate,
@@ -42,9 +43,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.PickDistance,
 		C3.Plugins.System.Cnds.PickAll,
 		C3.Plugins.System.Cnds.CompareBoolVar,
-		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Sprite.Acts.SetEffectParam,
 		C3.Plugins.Sprite.Acts.SetPos,
-		C3.JavaScriptInEvents.EventSheet1_Event64_Act1
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.JavaScriptInEvents.EventSheet1_Event69_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -74,6 +76,7 @@ self.C3_JsPropNameTable = [
 	{DragDrop: 0},
 	{Pin: 0},
 	{Detail: 0},
+	{ParentDetailId: 0},
 	{HeadGraphic: 0},
 	{BodyGraphic: 0},
 	{TopLeftPawGraphic: 0},
@@ -85,6 +88,7 @@ self.C3_JsPropNameTable = [
 	{Cells: 0},
 	{CellCandidates: 0},
 	{DetailCandidates: 0},
+	{DetailGraphics: 0},
 	{SourceId: 0},
 	{SourceAX: 0},
 	{SourceAY: 0},
@@ -122,5 +126,6 @@ self.InstanceType = {
 	Background: class extends self.ISpriteInstance {},
 	Cells: class extends self.ISpriteInstance {},
 	CellCandidates: class extends self.ISpriteInstance {},
-	DetailCandidates: class extends self.ISpriteInstance {}
+	DetailCandidates: class extends self.ISpriteInstance {},
+	DetailGraphics: class extends self.ISpriteInstance {}
 }
