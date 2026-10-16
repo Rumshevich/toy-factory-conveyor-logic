@@ -1,0 +1,39 @@
+{
+	"name": "DetailGraphics",
+	"plugin-id": "Sprite",
+	"sid": 413006865182815,
+	"instanceVariables": [
+		{
+			"name": "ParentDetailId",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 588534302407382
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 922920782229797
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		},
+		{
+			"effectId": "bulge",
+			"name": "Bulge"
+		}
+	],
+	"members": [
+		"BodyGraphic",
+		"BottomLeftPawGraphic",
+		"BottomRightPawGraphic",
+		"HeadGraphic",
+		"TopLeftPawGraphic",
+		"TopRightPawGraphic"
+	]
+}

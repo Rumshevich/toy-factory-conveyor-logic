@@ -648,6 +648,14 @@
 											}
 										},
 										{
+											"id": "set-opacity",
+											"objectClass": "Detail",
+											"sid": 840305690419349,
+											"parameters": {
+												"opacity": "20"
+											}
+										},
+										{
 											"id": "set-instvar-value",
 											"objectClass": "Detail",
 											"sid": 587707937558775,
@@ -783,6 +791,33 @@
 													"parameters": {
 														"destroy": true
 													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "HeadGraphic",
+													"sid": 254161460241078,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "HeadGraphic",
+													"sid": 923050282507705,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "HeadGraphic",
+													"sid": 204776495734277,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
+													}
 												}
 											],
 											"sid": 333948807972023
@@ -837,6 +872,33 @@
 													"behaviorType": "Pin",
 													"parameters": {
 														"destroy": true
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BodyGraphic",
+													"sid": 680723680541137,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BodyGraphic",
+													"sid": 771939288706110,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "BodyGraphic",
+													"sid": 642657715804738,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
 													}
 												}
 											],
@@ -893,6 +955,33 @@
 													"parameters": {
 														"destroy": true
 													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "TopRightPawGraphic",
+													"sid": 541141771187028,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "TopRightPawGraphic",
+													"sid": 788956801097958,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "TopRightPawGraphic",
+													"sid": 253264827671276,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
+													}
 												}
 											],
 											"sid": 464815787865970
@@ -947,6 +1036,33 @@
 													"behaviorType": "Pin",
 													"parameters": {
 														"destroy": true
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "TopLeftPawGraphic",
+													"sid": 842783426526096,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "TopLeftPawGraphic",
+													"sid": 540699001874830,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "TopLeftPawGraphic",
+													"sid": 382923991122461,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
 													}
 												}
 											],
@@ -1003,6 +1119,33 @@
 													"parameters": {
 														"destroy": true
 													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BottomLeftPawGraphic",
+													"sid": 411155850641304,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BottomLeftPawGraphic",
+													"sid": 529101333701548,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "BottomLeftPawGraphic",
+													"sid": 162282858228183,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
+													}
 												}
 											],
 											"sid": 159863416431726
@@ -1057,6 +1200,33 @@
 													"behaviorType": "Pin",
 													"parameters": {
 														"destroy": true
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BottomRightPawGraphic",
+													"sid": 988262149909919,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "BottomRightPawGraphic",
+													"sid": 170531092851098,
+													"parameters": {
+														"mode": "disable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "BottomRightPawGraphic",
+													"sid": 916987997931628,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"value": "Detail.UID"
 													}
 												}
 											],
@@ -2381,6 +2551,91 @@
 											"sid": 621249921164241
 										},
 										{
+											"bookmark": true,
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "DetailGraphics",
+													"sid": 716795091476799,
+													"parameters": {
+														"instance-variable": "ParentDetailId",
+														"comparison": 0,
+														"value": "DraggedDetailId"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "DetailGraphics",
+													"sid": 521674826374522,
+													"parameters": {
+														"mode": "enable",
+														"effect": "\"Tint\""
+													}
+												},
+												{
+													"id": "set-effect-parameter",
+													"objectClass": "DetailGraphics",
+													"sid": 223665946526821,
+													"parameters": {
+														"effect": "\"Tint\"",
+														"parameter-index": "0",
+														"value": "rgb(255, 220, 150)"
+													}
+												},
+												{
+													"id": "set-effect-enabled",
+													"objectClass": "DetailGraphics",
+													"sid": 481088227756657,
+													"parameters": {
+														"mode": "enable",
+														"effect": "\"Bulge\""
+													}
+												},
+												{
+													"id": "set-effect-parameter",
+													"objectClass": "DetailGraphics",
+													"sid": 132738604222730,
+													"parameters": {
+														"effect": "\"Bulge\"",
+														"parameter-index": "0",
+														"value": "0.65"
+													}
+												},
+												{
+													"id": "set-effect-parameter",
+													"objectClass": "DetailGraphics",
+													"sid": 531702751655891,
+													"parameters": {
+														"effect": "\"Bulge\"",
+														"parameter-index": "1",
+														"value": "0.18"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "DetailGraphics",
+													"sid": 506065623452454,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"AssemblyPop\"",
+														"property": "scale",
+														"end-x": "1.12",
+														"end-y": "1.12",
+														"time": "0.12",
+														"ease": "easeoutcubic",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 338631401093967
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -2402,6 +2657,7 @@
 											],
 											"actions": [],
 											"sid": 990454447898846,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -2435,7 +2691,8 @@
 															}
 														}
 													],
-													"sid": 760926929913884
+													"sid": 760926929913884,
+													"disabled": true
 												},
 												{
 													"eventType": "block",
@@ -2479,7 +2736,8 @@
 															}
 														}
 													],
-													"sid": 922156897082429
+													"sid": 922156897082429,
+													"disabled": true
 												},
 												{
 													"eventType": "block",
@@ -2491,7 +2749,8 @@
 															"sid": 519396094821261
 														}
 													],
-													"sid": 266637731615453
+													"sid": 266637731615453,
+													"disabled": true
 												}
 											]
 										}
@@ -2841,6 +3100,130 @@
 									"sid": 228905647572282
 								}
 							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "DetailGraphics",
+							"sid": 476483190060216,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"AssemblyPop\""
+							}
+						},
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 575315715165806,
+							"parameters": {
+								"object": "Detail"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Detail",
+							"sid": 553530367833568,
+							"parameters": {
+								"unique-id": "DetailGraphics.ParentDetailId"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 400054208453206,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 579691682877288,
+									"parameters": {
+										"unique-id": "Detail.PreviousCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 134745027192942,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 534700830220091,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 506250298128785
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 525748943034459,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 1,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 340276711866711,
+									"parameters": {
+										"unique-id": "Detail.TargetCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 485845123879757,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 377289086804051,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 282536988061701
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Detail",
+									"sid": 317881918194707
+								}
+							],
+							"sid": 133127718180264
 						}
 					]
 				}
