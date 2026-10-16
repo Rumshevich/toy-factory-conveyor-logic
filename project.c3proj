@@ -33,6 +33,20 @@
 			"name": "Tween",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "bulge",
+			"name": "Bulge",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "tint",
+			"name": "Tint",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "y5uytveyeaa",
@@ -61,7 +75,8 @@
 		"items": [
 			"Cells",
 			"CellCandidates",
-			"DetailCandidates"
+			"DetailCandidates",
+			"DetailGraphics"
 		],
 		"subfolders": []
 	},
