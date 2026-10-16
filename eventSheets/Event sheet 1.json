@@ -804,7 +804,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "HeadGraphic",
-													"sid": 891931910453487,
+													"sid": 923050282507705,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -886,7 +886,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "BodyGraphic",
-													"sid": 906470942952344,
+													"sid": 771939288706110,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -968,7 +968,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "TopRightPawGraphic",
-													"sid": 394979208507853,
+													"sid": 788956801097958,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -1050,7 +1050,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "TopLeftPawGraphic",
-													"sid": 358274926908306,
+													"sid": 540699001874830,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -1132,7 +1132,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "BottomLeftPawGraphic",
-													"sid": 651715999283705,
+													"sid": 529101333701548,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -1214,7 +1214,7 @@
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "BottomRightPawGraphic",
-													"sid": 291171152905125,
+													"sid": 170531092851098,
 													"parameters": {
 														"mode": "disable",
 														"effect": "\"Bulge\""
@@ -2578,17 +2578,17 @@
 												{
 													"id": "set-effect-parameter",
 													"objectClass": "DetailGraphics",
-													"sid": 595787571921790,
+													"sid": 223665946526821,
 													"parameters": {
 														"effect": "\"Tint\"",
 														"parameter-index": "0",
-														"value": "rgb(255, 235, 190)"
+														"value": "rgb(255, 220, 150)"
 													}
 												},
 												{
 													"id": "set-effect-enabled",
 													"objectClass": "DetailGraphics",
-													"sid": 625472940146654,
+													"sid": 481088227756657,
 													"parameters": {
 														"mode": "enable",
 														"effect": "\"Bulge\""
@@ -2597,7 +2597,7 @@
 												{
 													"id": "set-effect-parameter",
 													"objectClass": "DetailGraphics",
-													"sid": 795341451054476,
+													"sid": 132738604222730,
 													"parameters": {
 														"effect": "\"Bulge\"",
 														"parameter-index": "0",
@@ -2607,7 +2607,7 @@
 												{
 													"id": "set-effect-parameter",
 													"objectClass": "DetailGraphics",
-													"sid": 826596572814449,
+													"sid": 531702751655891,
 													"parameters": {
 														"effect": "\"Bulge\"",
 														"parameter-index": "1",
@@ -3135,96 +3135,96 @@
 					"actions": [],
 					"sid": 400054208453206,
 					"children": [
-				{
-					"eventType": "block",
-					"conditions": [
 						{
-							"id": "pick-by-unique-id",
-							"objectClass": "Cell",
-							"sid": 606721832066257,
-							"parameters": {
-								"unique-id": "Detail.PreviousCellId"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Cell",
-							"sid": 981509498956020,
-							"parameters": {
-								"instance-variable": "State",
-								"value": "\"empty\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 579691682877288,
+									"parameters": {
+										"unique-id": "Detail.PreviousCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 134745027192942,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 534700830220091,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 506250298128785
 						},
 						{
-							"id": "set-animation",
-							"objectClass": "Cell",
-							"sid": 894122122895323,
-							"parameters": {
-								"animation": "\"Empty\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 282288701152944
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Detail",
-							"sid": 969417422775613,
-							"parameters": {
-								"instance-variable": "TargetCellId",
-								"comparison": 1,
-								"value": "-1"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 525748943034459,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"comparison": 1,
+										"value": "-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 340276711866711,
+									"parameters": {
+										"unique-id": "Detail.TargetCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 485845123879757,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 377289086804051,
+									"parameters": {
+										"animation": "\"Empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 282536988061701
 						},
 						{
-							"id": "pick-by-unique-id",
-							"objectClass": "Cell",
-							"sid": 615475018803290,
-							"parameters": {
-								"unique-id": "Detail.TargetCellId"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Detail",
+									"sid": 317881918194707
+								}
+							],
+							"sid": 133127718180264
 						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Cell",
-							"sid": 537710711751192,
-							"parameters": {
-								"instance-variable": "State",
-								"value": "\"empty\""
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Cell",
-							"sid": 611629598601516,
-							"parameters": {
-								"animation": "\"Empty\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 108268924518846
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "Detail",
-							"sid": 295085191422976
-						}
-					],
-					"sid": 989956666273871
-					}
 					]
 				}
 			],
