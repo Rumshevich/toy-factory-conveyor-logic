@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "DebugHeadScale",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 818253490467027
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "INIT",
@@ -550,6 +560,76 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 714013169709812
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 257915436797491,
+							"parameters": {
+								"tag": "\"assembly-recipes\"",
+								"file": {
+									"path": "assembly-recipes.json"
+								}
+							}
+						}
+					],
+					"sid": 729241955311495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 210604483348981,
+							"parameters": {
+								"tag": "\"assembly-recipes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "JSON",
+							"sid": 928986198162323,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 986447066628234
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-parse-success",
+							"objectClass": "JSON",
+							"sid": 234696120480566
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 501479488126086,
+							"parameters": {
+								"variable": "DebugHeadScale",
+								"value": "JSON.Get(\"teddy_bear.parts.head.attachedScale\")"
+							}
+						}
+					],
+					"sid": 476278882398570
 				}
 			],
 			"sid": 161173091543951
@@ -567,9 +647,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 264949020588831,
+							"sid": 335944871562290,
 							"parameters": {
-								"interval-seconds": "1.0"
+								"interval-seconds": "1.5"
 							}
 						}
 					],
@@ -650,9 +730,9 @@
 										{
 											"id": "set-opacity",
 											"objectClass": "Detail",
-											"sid": 840305690419349,
+											"sid": 637704287696648,
 											"parameters": {
-												"opacity": "20"
+												"opacity": "0"
 											}
 										},
 										{
@@ -698,6 +778,15 @@
 											"parameters": {
 												"instance-variable": "AssemblyState",
 												"value": "\"free\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 213006632066214,
+											"parameters": {
+												"instance-variable": "AttachedParts",
+												"value": "\"\""
 											}
 										},
 										{
@@ -771,8 +860,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "HeadGraphic",
-													"sid": 370954446212380,
-													"behaviorType": "Pin",
+													"sid": 479658924068028,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -786,8 +875,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "HeadGraphic",
-													"sid": 482083400558687,
-													"behaviorType": "Pin",
+													"sid": 542290681412283,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -853,8 +942,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "BodyGraphic",
-													"sid": 416070375425124,
-													"behaviorType": "Pin",
+													"sid": 903336837671910,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -868,8 +957,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "BodyGraphic",
-													"sid": 617061287768839,
-													"behaviorType": "Pin",
+													"sid": 579632786694112,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -935,8 +1024,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "TopRightPawGraphic",
-													"sid": 178070288849829,
-													"behaviorType": "Pin",
+													"sid": 329595191110358,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -950,8 +1039,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "TopRightPawGraphic",
-													"sid": 563256159442318,
-													"behaviorType": "Pin",
+													"sid": 898620648407697,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -1017,8 +1106,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "TopLeftPawGraphic",
-													"sid": 623044790883240,
-													"behaviorType": "Pin",
+													"sid": 970521350535389,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -1032,8 +1121,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "TopLeftPawGraphic",
-													"sid": 548612816501640,
-													"behaviorType": "Pin",
+													"sid": 794650061091960,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -1099,8 +1188,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "BottomLeftPawGraphic",
-													"sid": 605475963984676,
-													"behaviorType": "Pin",
+													"sid": 727336751011568,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -1114,8 +1203,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "BottomLeftPawGraphic",
-													"sid": 160882998857825,
-													"behaviorType": "Pin",
+													"sid": 621784138593907,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -1181,8 +1270,8 @@
 												{
 													"id": "pin-to-object-properties",
 													"objectClass": "BottomRightPawGraphic",
-													"sid": 583107828825872,
-													"behaviorType": "Pin",
+													"sid": 177817220597949,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"pin-to": "Detail",
 														"x": true,
@@ -1196,8 +1285,8 @@
 												{
 													"id": "set-destroy",
 													"objectClass": "BottomRightPawGraphic",
-													"sid": 954025303963168,
-													"behaviorType": "Pin",
+													"sid": 828187389109847,
+													"behaviorType": "GraphicPin",
 													"parameters": {
 														"destroy": true
 													}
@@ -2159,6 +2248,76 @@
 					"sid": 466350301785364
 				},
 				{
+					"eventType": "variable",
+					"name": "AssemblyPartScale",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "Sets the scale of the part relative to the anchor.",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 973480714662631
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedGraphicId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 488436503358579
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorGraphicId",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 536268624319217
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorGraphicScale",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 495406434181082
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorPointX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 327653268313042
+				},
+				{
+					"eventType": "variable",
+					"name": "AnchorPointY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 918487464235027
+				},
+				{
+					"eventType": "variable",
+					"name": "MissingPartsCount",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The number of parts required to complete assembly",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 983805726977987
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -2222,10 +2381,62 @@
 								"variable": "AnchorDetailType",
 								"value": "\"\""
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 973445276642533,
+							"parameters": {
+								"variable": "AssemblyPartScale",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 525201857031909,
+							"parameters": {
+								"variable": "DraggedGraphicId",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 156986430869905,
+							"parameters": {
+								"variable": "AnchorGraphicId",
+								"value": "-1"
+							}
 						}
 					],
 					"sid": 235016029036104,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "JSON",
+									"sid": 301427715480084,
+									"parameters": {
+										"path": "DraggedToyType & \".parts.\" & DraggedDetailType & \".attachedScale\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 673859170982524,
+									"parameters": {
+										"variable": "AssemblyPartScale",
+										"value": "JSON.Get(DraggedToyType & \".parts.\" & DraggedDetailType & \".attachedScale\")"
+									}
+								}
+							],
+							"sid": 658761774830783
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -2312,6 +2523,87 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 735845586320156,
+											"parameters": {
+												"object": "DetailGraphics"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DetailGraphics",
+											"sid": 746342911058612,
+											"parameters": {
+												"instance-variable": "ParentDetailId",
+												"comparison": 0,
+												"value": "AnchorDetailId"
+											}
+										},
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 199623532563600,
+											"parameters": {
+												"object": "DetailGraphics",
+												"expression": "DetailGraphics.GraphicPin.PinnedUID",
+												"comparison": 0,
+												"value": "AnchorDetailId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 317593444068239,
+											"parameters": {
+												"variable": "AnchorGraphicId",
+												"value": "DetailGraphics.UID"
+											}
+										}
+									],
+									"sid": 308240517254100
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 505932128487338,
+											"parameters": {
+												"object": "DetailGraphics"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DetailGraphics",
+											"sid": 745049282468026,
+											"parameters": {
+												"instance-variable": "ParentDetailId",
+												"comparison": 0,
+												"value": "DraggedDetailId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 662221003311140,
+											"parameters": {
+												"variable": "DraggedGraphicId",
+												"value": "DetailGraphics.UID"
+											}
+										}
+									],
+									"sid": 921666089742255
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
 											"sid": 348615800520144,
@@ -2324,21 +2616,21 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 431866672400063,
+											"sid": 221291943229283,
 											"parameters": {
 												"variable": "AnchorDetailType",
 												"comparison": 0,
-												"value": "\"body\""
+												"value": "JSON.Get(DraggedToyType & \".anchorType\")"
 											}
 										},
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 391420557050963,
+											"sid": 609552861255950,
 											"parameters": {
 												"variable": "DraggedDetailType",
 												"comparison": 1,
-												"value": "\"body\""
+												"value": "JSON.Get(DraggedToyType & \".anchorType\")"
 											}
 										},
 										{
@@ -2349,6 +2641,56 @@
 												"instance-variable": "ToyType",
 												"comparison": 0,
 												"value": "DraggedToyType"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 591408086406545,
+											"parameters": {
+												"variable": "AssemblyPartScale",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 589046848046338,
+											"parameters": {
+												"variable": "AnchorGraphicId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 864753251336190,
+											"parameters": {
+												"variable": "DraggedGraphicId",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 662339991728184,
+											"parameters": {
+												"first-value": "find(Detail.AttachedParts, \"|\" & DraggedDetailType & \"|\")",
+												"comparison": 0,
+												"second-value": "-1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 918921425158375,
+											"parameters": {
+												"instance-variable": "AssemblyState",
+												"comparison": 1,
+												"value": "\"complete\""
 											}
 										}
 									],
@@ -2368,6 +2710,11 @@
 							]
 						},
 						{
+							"eventType": "comment",
+							"text": "Start assembly"
+						},
+						{
+							"bookmark": true,
 							"eventType": "block",
 							"conditions": [
 								{
@@ -2382,6 +2729,211 @@
 							"actions": [],
 							"sid": 534398012030879,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 440424918374966,
+											"parameters": {
+												"object": "Detail"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Detail",
+											"sid": 208990304942125,
+											"parameters": {
+												"unique-id": "AnchorDetailId"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 583010868025528,
+											"parameters": {
+												"instance-variable": "AssemblyState",
+												"comparison": 0,
+												"value": "\"free\""
+											}
+										},
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 351402436757271,
+											"parameters": {
+												"object": "DetailGraphics"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "DetailGraphics",
+											"sid": 244613617539332,
+											"parameters": {
+												"unique-id": "AnchorGraphicId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-scale",
+											"objectClass": "DetailGraphics",
+											"sid": 851554868062168,
+											"parameters": {
+												"scale": "JSON.Get(DraggedToyType & \".anchorScale\")"
+											}
+										}
+									],
+									"sid": 300605398261389
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 353525219935994,
+											"parameters": {
+												"object": "DetailGraphics"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "DetailGraphics",
+											"sid": 789454101596530,
+											"parameters": {
+												"unique-id": "AnchorGraphicId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 895067737881594,
+											"parameters": {
+												"variable": "AnchorGraphicScale",
+												"value": "DetailGraphics.Width / DetailGraphics.ImageWidth"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 689096579130653,
+											"parameters": {
+												"variable": "AnchorPointX",
+												"value": "DetailGraphics.ImagePointX(DraggedDetailType)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 417144509398300,
+											"parameters": {
+												"variable": "AnchorPointY",
+												"value": "DetailGraphics.ImagePointY(DraggedDetailType)"
+											}
+										}
+									],
+									"sid": 967458001744047
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 516945047241057,
+											"parameters": {
+												"object": "DetailGraphics"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "DetailGraphics",
+											"sid": 338922277766660,
+											"parameters": {
+												"unique-id": "DraggedGraphicId"
+											}
+										},
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 481544185656824,
+											"parameters": {
+												"object": "AnchorGraphics"
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "AnchorGraphics",
+											"sid": 672698311852145,
+											"parameters": {
+												"unique-id": "AnchorGraphicId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "unpin",
+											"objectClass": "DetailGraphics",
+											"sid": 997360178936868,
+											"behaviorType": "GraphicPin"
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "DetailGraphics",
+											"sid": 989873413899041,
+											"parameters": {
+												"scale": "AssemblyPartScale * AnchorGraphicScale"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "DetailGraphics",
+											"sid": 555799811588730,
+											"parameters": {
+												"x": "DetailGraphics.X + AnchorPointX - DetailGraphics.ImagePointX(\"to_body\")",
+												"y": "DetailGraphics.Y + AnchorPointY - DetailGraphics.ImagePointY(\"to_body\")"
+											}
+										},
+										{
+											"id": "pin-to-object-properties",
+											"objectClass": "DetailGraphics",
+											"sid": 359142431598793,
+											"behaviorType": "GraphicPin",
+											"parameters": {
+												"pin-to": "AnchorGraphics",
+												"x": true,
+												"y": true,
+												"angle": true,
+												"width-type": "no",
+												"height-type": "no",
+												"z": false
+											}
+										},
+										{
+											"id": "set-destroy",
+											"objectClass": "DetailGraphics",
+											"sid": 599288084387311,
+											"behaviorType": "GraphicPin",
+											"parameters": {
+												"destroy": true
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DetailGraphics",
+											"sid": 835788138310711,
+											"parameters": {
+												"instance-variable": "ParentDetailId",
+												"value": "AnchorDetailId"
+											}
+										}
+									],
+									"sid": 506065765796526
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -2411,6 +2963,24 @@
 												"instance-variable": "AssemblyState",
 												"value": "\"in_progress\""
 											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Detail",
+											"sid": 116190795382204,
+											"parameters": {
+												"instance-variable": "AttachedParts",
+												"value": "Detail.AttachedParts & \"|\" & DraggedDetailType & \"|\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 915306357810098,
+											"parameters": {
+												"variable": "MissingPartsCount",
+												"value": "0"
+											}
 										}
 									],
 									"sid": 419687070306169,
@@ -2419,221 +2989,72 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 511615850011160,
+													"id": "for-each",
+													"objectClass": "JSON",
+													"sid": 756038482725168,
 													"parameters": {
-														"variable": "DraggedDetailType",
-														"comparison": 0,
-														"value": "\"head\""
+														"path": "DraggedToyType & \".parts\""
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 545304964680116,
+											"children": [
 												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Detail",
-													"sid": 854327390044043,
-													"parameters": {
-														"instance-variable": "HasHead",
-														"value": "true"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 711180321357667,
+															"parameters": {
+																"first-value": "find(Detail.AttachedParts, \"|\" & JSON.CurrentKey & \"|\")",
+																"comparison": 0,
+																"second-value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "add-to-eventvar",
+															"objectClass": "System",
+															"sid": 243254474853953,
+															"parameters": {
+																"variable": "MissingPartsCount",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 586354581141041
 												}
-											],
-											"sid": 181504870555586
+											]
 										},
 										{
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-eventvar",
+													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 244968461477557,
+													"sid": 749733295571712,
 													"parameters": {
-														"variable": "DraggedDetailType",
+														"first-value": "MissingPartsCount",
 														"comparison": 0,
-														"value": "\"top_right_paw\""
+														"second-value": "0"
 													}
 												}
 											],
 											"actions": [
 												{
-													"id": "set-boolean-instvar",
+													"id": "set-instvar-value",
 													"objectClass": "Detail",
-													"sid": 405530661309030,
+													"sid": 581332640904873,
 													"parameters": {
-														"instance-variable": "HasTopRightPaw",
-														"value": "true"
+														"instance-variable": "AssemblyState",
+														"value": "\"complete\""
 													}
 												}
 											],
-											"sid": 395247109756200
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 978062483441432,
-													"parameters": {
-														"variable": "DraggedDetailType",
-														"comparison": 0,
-														"value": "\"top_left_paw\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Detail",
-													"sid": 995056192976125,
-													"parameters": {
-														"instance-variable": "HasTopLeftPaw",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 599599784767604
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 241429552790621,
-													"parameters": {
-														"variable": "DraggedDetailType",
-														"comparison": 0,
-														"value": "\"bottom_right_paw\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Detail",
-													"sid": 120465862630604,
-													"parameters": {
-														"instance-variable": "HasBottomRightPaw",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 203522818347211
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 766401352548882,
-													"parameters": {
-														"variable": "DraggedDetailType",
-														"comparison": 0,
-														"value": "\"bottom_left_paw\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Detail",
-													"sid": 405790863144194,
-													"parameters": {
-														"instance-variable": "HasBottomLeftPaw",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 621249921164241
-										},
-										{
-											"bookmark": true,
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "DetailGraphics",
-													"sid": 716795091476799,
-													"parameters": {
-														"instance-variable": "ParentDetailId",
-														"comparison": 0,
-														"value": "DraggedDetailId"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-effect-enabled",
-													"objectClass": "DetailGraphics",
-													"sid": 521674826374522,
-													"parameters": {
-														"mode": "enable",
-														"effect": "\"Tint\""
-													}
-												},
-												{
-													"id": "set-effect-parameter",
-													"objectClass": "DetailGraphics",
-													"sid": 223665946526821,
-													"parameters": {
-														"effect": "\"Tint\"",
-														"parameter-index": "0",
-														"value": "rgb(255, 220, 150)"
-													}
-												},
-												{
-													"id": "set-effect-enabled",
-													"objectClass": "DetailGraphics",
-													"sid": 481088227756657,
-													"parameters": {
-														"mode": "enable",
-														"effect": "\"Bulge\""
-													}
-												},
-												{
-													"id": "set-effect-parameter",
-													"objectClass": "DetailGraphics",
-													"sid": 132738604222730,
-													"parameters": {
-														"effect": "\"Bulge\"",
-														"parameter-index": "0",
-														"value": "0.65"
-													}
-												},
-												{
-													"id": "set-effect-parameter",
-													"objectClass": "DetailGraphics",
-													"sid": 531702751655891,
-													"parameters": {
-														"effect": "\"Bulge\"",
-														"parameter-index": "1",
-														"value": "0.18"
-													}
-												},
-												{
-													"id": "tween-two-properties",
-													"objectClass": "DetailGraphics",
-													"sid": 506065623452454,
-													"behaviorType": "Tween",
-													"parameters": {
-														"tags": "\"AssemblyPop\"",
-														"property": "scale",
-														"end-x": "1.12",
-														"end-y": "1.12",
-														"time": "0.12",
-														"ease": "easeoutcubic",
-														"destroy-on-complete": "no",
-														"loop": "no",
-														"ping-pong": "no",
-														"repeat-count": "1"
-													}
-												}
-											],
-											"sid": 338631401093967
+											"sid": 843718094792979
 										},
 										{
 											"eventType": "block",
@@ -2657,7 +3078,6 @@
 											],
 											"actions": [],
 											"sid": 990454447898846,
-											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -2691,8 +3111,7 @@
 															}
 														}
 													],
-													"sid": 760926929913884,
-													"disabled": true
+													"sid": 760926929913884
 												},
 												{
 													"eventType": "block",
@@ -2736,8 +3155,7 @@
 															}
 														}
 													],
-													"sid": 922156897082429,
-													"disabled": true
+													"sid": 922156897082429
 												},
 												{
 													"eventType": "block",
@@ -2749,8 +3167,7 @@
 															"sid": 519396094821261
 														}
 													],
-													"sid": 266637731615453,
-													"disabled": true
+													"sid": 266637731615453
 												}
 											]
 										}
@@ -3102,130 +3519,6 @@
 							]
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-tweens-finished",
-							"objectClass": "DetailGraphics",
-							"sid": 476483190060216,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"AssemblyPop\""
-							}
-						},
-						{
-							"id": "pick-all",
-							"objectClass": "System",
-							"sid": 575315715165806,
-							"parameters": {
-								"object": "Detail"
-							}
-						},
-						{
-							"id": "pick-by-unique-id",
-							"objectClass": "Detail",
-							"sid": 553530367833568,
-							"parameters": {
-								"unique-id": "DetailGraphics.ParentDetailId"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 400054208453206,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-unique-id",
-									"objectClass": "Cell",
-									"sid": 579691682877288,
-									"parameters": {
-										"unique-id": "Detail.PreviousCellId"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Cell",
-									"sid": 134745027192942,
-									"parameters": {
-										"instance-variable": "State",
-										"value": "\"empty\""
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Cell",
-									"sid": 534700830220091,
-									"parameters": {
-										"animation": "\"Empty\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 506250298128785
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Detail",
-									"sid": 525748943034459,
-									"parameters": {
-										"instance-variable": "TargetCellId",
-										"comparison": 1,
-										"value": "-1"
-									}
-								},
-								{
-									"id": "pick-by-unique-id",
-									"objectClass": "Cell",
-									"sid": 340276711866711,
-									"parameters": {
-										"unique-id": "Detail.TargetCellId"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Cell",
-									"sid": 485845123879757,
-									"parameters": {
-										"instance-variable": "State",
-										"value": "\"empty\""
-									}
-								},
-								{
-									"id": "set-animation",
-									"objectClass": "Cell",
-									"sid": 377289086804051,
-									"parameters": {
-										"animation": "\"Empty\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 282536988061701
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Detail",
-									"sid": 317881918194707
-								}
-							],
-							"sid": 133127718180264
-						}
-					]
 				}
 			],
 			"sid": 364044051292251
@@ -3278,6 +3571,282 @@
 				}
 			],
 			"sid": 721348992435100
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DEBUG — COMPLETED TOYS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Detail",
+							"sid": 656422562325392,
+							"parameters": {
+								"instance-variable": "AssemblyState",
+								"comparison": 0,
+								"value": "\"complete\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Detail",
+							"sid": 533243667284974,
+							"parameters": {
+								"instance-variable": "DebugIsExiting"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 999337427820928,
+							"parameters": {
+								"object": "Detail"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Detail",
+							"sid": 151379964210601,
+							"parameters": {
+								"instance-variable": "DebugIsExiting",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Detail",
+							"sid": 686342942770944,
+							"parameters": {
+								"instance-variable": "isDragging",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Detail",
+							"sid": 392699112631736,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "stop-tweens",
+							"objectClass": "Detail",
+							"sid": 478893686263951,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"MoveToCell\""
+							}
+						},
+						{
+							"id": "stop-tweens",
+							"objectClass": "Detail",
+							"sid": 963069663336583,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"EnterConveyor\""
+							}
+						}
+					],
+					"sid": 185106799375333,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 954048531114059,
+									"parameters": {
+										"unique-id": "Detail.CurrentCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 803662690395880,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 523814479825481,
+									"parameters": {
+										"animation": "\"empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 532130487458835
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 434794525092434,
+									"parameters": {
+										"unique-id": "Detail.TargetCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 732933534226294,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 404702184731960,
+									"parameters": {
+										"animation": "\"empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 752525370280631
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Cell",
+									"sid": 137077412555373,
+									"parameters": {
+										"unique-id": "Detail.PreviousCellId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Cell",
+									"sid": 153494094173262,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "\"empty\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Cell",
+									"sid": 783350323974646,
+									"parameters": {
+										"animation": "\"empty\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 807499646309762
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 522734389805582,
+									"parameters": {
+										"instance-variable": "CurrentCellId",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 490806116416795,
+									"parameters": {
+										"instance-variable": "TargetCellId",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Detail",
+									"sid": 509582219664701,
+									"parameters": {
+										"instance-variable": "PreviousCellId",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Detail",
+									"sid": 334890917581136,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"DebugExit\"",
+										"property": "position",
+										"end-x": "Detail.X",
+										"end-y": "ViewportTop(\"Details\") - Detail.Height * 2",
+										"time": "3",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 359977146680783
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Detail",
+							"sid": 100615329097494,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"DebugExit\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Detail",
+							"sid": 148840273943780,
+							"parameters": {
+								"instance-variable": "DebugIsExiting"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Detail",
+							"sid": 311569859197386
+						}
+					],
+					"sid": 572551581965577
+				}
+			],
+			"sid": 202031020179286
 		}
 	],
 	"sid": 186625743260119

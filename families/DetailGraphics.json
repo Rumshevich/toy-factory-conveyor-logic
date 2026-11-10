@@ -16,6 +16,11 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 922920782229797
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "GraphicPin",
+			"sid": 801136402924690
 		}
 	],
 	"effectTypes": [

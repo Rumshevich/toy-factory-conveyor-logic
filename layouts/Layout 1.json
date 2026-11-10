@@ -24,10 +24,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1031,
-						"y": 1362,
+						"x": 1038,
+						"y": 1812,
 						"width": 2048,
-						"height": 2732,
+						"height": 3640,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -128,10 +128,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1139,
-						"y": 1372,
-						"width": 2262.552380952381,
-						"height": 2732,
+						"x": 747,
+						"y": 1695,
+						"width": 1395.8095238095239,
+						"height": 2085,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -217,7 +217,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -238,10 +238,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 399,
-						"y": 971,
-						"width": 300,
-						"height": 300,
+						"x": 288,
+						"y": 863,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -257,7 +257,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -278,10 +278,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 620,
-						"y": 1101,
-						"width": 300,
-						"height": 300,
+						"x": 515,
+						"y": 1000,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -297,7 +297,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -318,10 +318,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 840,
-						"y": 973,
-						"width": 300,
-						"height": 300,
+						"x": 750,
+						"y": 864,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -337,7 +337,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -358,10 +358,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1064,
-						"y": 1093,
-						"width": 300,
-						"height": 300,
+						"x": 992,
+						"y": 989,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -377,7 +377,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -398,10 +398,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1288,
-						"y": 968,
-						"width": 300,
-						"height": 300,
+						"x": 1234,
+						"y": 865,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -417,47 +417,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 21,
-					"sid": 426343932216893,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": "start"
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1511,
-						"y": 1098,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -478,10 +438,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 402,
-						"y": 1224,
-						"width": 300,
-						"height": 300,
+						"x": 273,
+						"y": 1136,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -497,7 +457,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -518,10 +478,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 623,
-						"y": 1356,
-						"width": 300,
-						"height": 300,
+						"x": 989,
+						"y": 1262,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -537,7 +497,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -558,10 +518,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 843,
-						"y": 1225,
-						"width": 300,
-						"height": 300,
+						"x": 516,
+						"y": 1275,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -577,7 +537,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -598,10 +558,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1068,
-						"y": 1349,
-						"width": 300,
-						"height": 300,
+						"x": 758,
+						"y": 1136,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -617,7 +577,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -638,10 +598,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1290,
-						"y": 1221,
-						"width": 300,
-						"height": 300,
+						"x": 1226,
+						"y": 1136,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -657,47 +617,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 27,
-					"sid": 439217048998573,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": ""
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1512,
-						"y": 1354,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -718,10 +638,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 406,
-						"y": 1479,
-						"width": 300,
-						"height": 300,
+						"x": 272,
+						"y": 1408,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -737,7 +657,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -758,10 +678,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 627,
-						"y": 1611,
-						"width": 300,
-						"height": 300,
+						"x": 515,
+						"y": 1556,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -777,7 +697,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -798,10 +718,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 847,
-						"y": 1480,
-						"width": 300,
-						"height": 300,
+						"x": 757,
+						"y": 1412,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -817,7 +737,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -838,10 +758,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1072,
-						"y": 1604,
-						"width": 300,
-						"height": 300,
+						"x": 993,
+						"y": 1541,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -857,7 +777,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -878,10 +798,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1294,
-						"y": 1476,
-						"width": 300,
-						"height": 300,
+						"x": 1229,
+						"y": 1408,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -897,47 +817,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 33,
-					"sid": 499652817700080,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": ""
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1516,
-						"y": 1609,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -958,10 +838,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 411,
-						"y": 1735,
-						"width": 300,
-						"height": 300,
+						"x": 272,
+						"y": 1685,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -977,7 +857,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -998,10 +878,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 632,
-						"y": 1867,
-						"width": 300,
-						"height": 300,
+						"x": 517,
+						"y": 1830,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1017,7 +897,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1038,10 +918,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 852,
-						"y": 1736,
-						"width": 300,
-						"height": 300,
+						"x": 756,
+						"y": 1683,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1057,7 +937,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1078,10 +958,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1077,
-						"y": 1860,
-						"width": 300,
-						"height": 300,
+						"x": 993,
+						"y": 1821,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1097,7 +977,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1118,10 +998,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1299,
-						"y": 1732,
-						"width": 300,
-						"height": 300,
+						"x": 1235,
+						"y": 1682,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1137,47 +1017,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 39,
-					"sid": 700107083408600,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": ""
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1521,
-						"y": 1865,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1198,10 +1038,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 415,
-						"y": 1991,
-						"width": 300,
-						"height": 300,
+						"x": 269,
+						"y": 1964,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1217,7 +1057,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1238,10 +1078,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 636,
-						"y": 2123,
-						"width": 300,
-						"height": 300,
+						"x": 756,
+						"y": 2245,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1257,7 +1097,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1278,10 +1118,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 856,
-						"y": 1992,
-						"width": 300,
-						"height": 300,
+						"x": 757,
+						"y": 1957,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1297,7 +1137,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1318,10 +1158,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1081,
-						"y": 2116,
-						"width": 300,
-						"height": 300,
+						"x": 995,
+						"y": 2101,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1337,7 +1177,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1358,10 +1198,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1303,
-						"y": 1988,
-						"width": 300,
-						"height": 300,
+						"x": 1233,
+						"y": 1957,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1377,47 +1217,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 45,
-					"sid": 715315700977451,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": ""
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1525,
-						"y": 2121,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1438,10 +1238,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 418,
+						"x": 263,
 						"y": 2248,
-						"width": 300,
-						"height": 300,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1457,7 +1257,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1478,10 +1278,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 639,
-						"y": 2380,
-						"width": 300,
-						"height": 300,
+						"x": 511,
+						"y": 2655,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1497,7 +1297,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1518,10 +1318,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 859,
-						"y": 2249,
-						"width": 300,
-						"height": 300,
+						"x": 514,
+						"y": 2383,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1537,7 +1337,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1558,10 +1358,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1084,
-						"y": 2373,
-						"width": 300,
-						"height": 300,
+						"x": 996,
+						"y": 2661,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1577,7 +1377,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1598,10 +1398,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1306,
-						"y": 2245,
-						"width": 300,
-						"height": 300,
+						"x": 1241,
+						"y": 2235,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1617,47 +1417,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 51,
-					"sid": 564941026501516,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": ""
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1528,
-						"y": 2378,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1678,10 +1438,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 427,
-						"y": 2505,
-						"width": 300,
-						"height": 300,
+						"x": 268,
+						"y": 2522,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1697,7 +1457,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1718,10 +1478,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 648,
-						"y": 2637,
-						"width": 300,
-						"height": 300,
+						"x": 516,
+						"y": 2108,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1737,7 +1497,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1758,10 +1518,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 868,
-						"y": 2506,
-						"width": 300,
-						"height": 300,
+						"x": 756,
+						"y": 2521,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1777,47 +1537,7 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Empty",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 55,
-					"sid": 619019816701486,
-					"tags": "",
-					"instanceVariables": {
-						"State": "empty",
-						"NextAId": -1,
-						"NextBId": -1,
-						"NextFId": -1,
-						"ConfigType": "end"
-					},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1093,
-						"y": 2630,
-						"width": 300,
-						"height": 300,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Cell",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1838,10 +1558,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1315,
-						"y": 2502,
-						"width": 300,
-						"height": 300,
+						"x": 1244,
+						"y": 2524,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1857,31 +1577,31 @@
 				{
 					"type": "Cell",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Empty",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 57,
-					"sid": 201398220256014,
+					"uid": 10,
+					"sid": 780189647588441,
 					"tags": "",
 					"instanceVariables": {
 						"State": "empty",
 						"NextAId": -1,
 						"NextBId": -1,
 						"NextFId": -1,
-						"ConfigType": "end"
+						"ConfigType": ""
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1537,
-						"y": 2635,
-						"width": 300,
-						"height": 300,
+						"x": 1002,
+						"y": 2379,
+						"width": 320,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1994,10 +1714,193 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "Machine",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "MachineGenerator",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 7,
+					"sid": 688429257269365,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1361,
+						"y": 667,
+						"width": 2725.5555555555557,
+						"height": 476.9833729216152,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
+			"sid": 321536201803853,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "OrdersPlaceholder",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"sid": 582727544859194,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1018,
+						"y": 215,
+						"width": 2048,
+						"height": 474,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "HUD",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"sid": 147414887880259,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1029,
+						"y": 205,
+						"width": 2048,
+						"height": 384,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
+			"sid": 995082510532888,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
 	"sid": 442514680669649,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "JSON",
+			"properties": {},
+			"uid": 5,
+			"sid": 158972908428368,
+			"tags": "",
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 2048,
 	"height": 2732,

@@ -1,0 +1,23 @@
+{
+  "teddy_bear": {
+    "anchorType": "body",
+    "anchorScale": 0.7,
+    "parts": {
+      "head": {
+        "attachedScale": 0.75
+      },
+      "top_left_paw": {
+        "attachedScale": 0.6
+      },
+      "top_right_paw": {
+        "attachedScale": 0.6
+      },
+      "bottom_left_paw": {
+        "attachedScale": 0.6
+      },
+      "bottom_right_paw": {
+        "attachedScale": 0.6
+      }
+    }
+  }
+}
