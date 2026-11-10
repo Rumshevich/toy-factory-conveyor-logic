@@ -18,8 +18,8 @@
 			{
 				"frames": [
 					{
-						"width": 216,
-						"height": 300,
+						"width": 280,
+						"height": 280,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -70,6 +70,33 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "head",
+								"x": 0.559375,
+								"y": 0.10625
+							},
+							{
+								"name": "top_left_paw",
+								"x": 0.753125,
+								"y": 0.24375
+							},
+							{
+								"name": "top_right_paw",
+								"x": 0.33125,
+								"y": 0.209375
+							},
+							{
+								"name": "bottom_left_paw",
+								"x": 0.825,
+								"y": 0.9
+							},
+							{
+								"name": "bottom_right_paw",
+								"x": 0.28125,
+								"y": 0.878125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

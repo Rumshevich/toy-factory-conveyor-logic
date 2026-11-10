@@ -18,8 +18,8 @@
 			{
 				"frames": [
 					{
-						"width": 265,
-						"height": 265,
+						"width": 280,
+						"height": 280,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
@@ -62,6 +62,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "to_body",
+								"x": 0.5366666666666666,
+								"y": 0.6966666666666667
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

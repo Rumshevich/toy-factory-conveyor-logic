@@ -1,11 +1,25 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 50600,
-	"name": "ConveyorTest",
+	"savedWithRelease": 50603,
+	"name": "Toy Factory Revival",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
 	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
 		{
 			"type": "plugin",
 			"id": "Sprite",
@@ -57,16 +71,27 @@
 			"Stopper",
 			"Cell",
 			"Detail",
-			"HeadGraphic",
-			"BodyGraphic",
-			"TopLeftPawGraphic",
-			"TopRightPawGraphic",
-			"BottomRightPawGraphic",
-			"BottomLeftPawGraphic",
-			"TeddyBear",
-			"Background"
+			"Background",
+			"JSON",
+			"AJAX",
+			"MachineGenerator",
+			"OrdersPlaceholder",
+			"HUD"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"BodyGraphic",
+					"BottomLeftPawGraphic",
+					"BottomRightPawGraphic",
+					"HeadGraphic",
+					"TopLeftPawGraphic",
+					"TopRightPawGraphic"
+				],
+				"subfolders": [],
+				"name": "Part's graphics"
+			}
+		]
 	},
 	"functionsName": "Functions",
 	"autosaveData": null,
@@ -76,7 +101,8 @@
 			"Cells",
 			"CellCandidates",
 			"DetailCandidates",
-			"DetailGraphics"
+			"DetailGraphics",
+			"AnchorGraphics"
 		],
 		"subfolders": []
 	},
@@ -175,7 +201,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "assembly-recipes.json",
+					"type": "application/json",
+					"sid": 627421493963845,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
@@ -204,8 +239,8 @@
 		"description": "",
 		"version": "1.0.0.0",
 		"autoIncrementVersion": false,
-		"author": "",
-		"authorEmail": "",
+		"author": "rumshevich",
+		"authorEmail": "toy.factory.revival@yandex.ru",
 		"authorWebsite": "",
 		"appId": "",
 		"saveLLMContextFile": true,

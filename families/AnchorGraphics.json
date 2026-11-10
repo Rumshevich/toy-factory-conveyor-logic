@@ -1,0 +1,16 @@
+{
+	"name": "AnchorGraphics",
+	"plugin-id": "Sprite",
+	"sid": 929220844557723,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BodyGraphic",
+		"BottomLeftPawGraphic",
+		"BottomRightPawGraphic",
+		"HeadGraphic",
+		"TopLeftPawGraphic",
+		"TopRightPawGraphic"
+	]
+}

@@ -69,41 +69,6 @@
 			"sid": 980011287165555
 		},
 		{
-			"name": "HasHead",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 903969578648044
-		},
-		{
-			"name": "HasTopRightPaw",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 520263096614896
-		},
-		{
-			"name": "HasTopLeftPaw",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 529759455493315
-		},
-		{
-			"name": "HasBottomRightPaw",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 395721150248314
-		},
-		{
-			"name": "HasBottomLeftPaw",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 870078198405210
-		},
-		{
 			"name": "PreviousCellId",
 			"type": "number",
 			"desc": "",
@@ -116,6 +81,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 627150300257978
+		},
+		{
+			"name": "AttachedParts",
+			"type": "string",
+			"desc": "List of attached parts",
+			"show": true,
+			"sid": 632883459902166
+		},
+		{
+			"name": "DebugIsExiting",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 953330065744091
 		}
 	],
 	"behaviorTypes": [
@@ -150,6 +129,22 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 7273183,
+						"collisionPoly": {
+							"points": [
+								0.24838709677419354,
+								0.07419354838709677,
+								0.7516129032258064,
+								0.07419354838709677,
+								1,
+								0.5032258064516129,
+								0.7516129032258064,
+								0.9258064516129032,
+								0.24838709677419354,
+								0.9258064516129032,
+								0,
+								0.4967741935483871
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
