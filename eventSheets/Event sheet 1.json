@@ -801,10 +801,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Detail",
-											"sid": 966780593335570,
+											"sid": 669168126201421,
 											"parameters": {
 												"instance-variable": "DetailColor",
-												"value": "\"blue\""
+												"value": "choose(\"blue\", \"yellow\")"
 											}
 										},
 										{
@@ -1324,6 +1324,71 @@
 									]
 								}
 							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Here we’re coloring it yellow for debugging purposes."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Detail",
+							"sid": 944025397157485,
+							"parameters": {
+								"instance-variable": "DetailColor",
+								"comparison": 0,
+								"value": "\"yellow\""
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 956502914869084,
+							"parameters": {
+								"object": "Detail"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 122984490193870,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 895467143413311,
+									"parameters": {
+										"object": "DetailGraphics"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "DetailGraphics",
+									"sid": 911385798983394,
+									"parameters": {
+										"instance-variable": "ParentDetailId",
+										"comparison": 0,
+										"value": "Detail.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "DetailGraphics",
+									"sid": 252110920114529,
+									"parameters": {
+										"color": "rgbEx(100, 85, 20)"
+									}
+								}
+							],
+							"sid": 173531374937013
 						}
 					]
 				},
@@ -2169,6 +2234,46 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "DraggedX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The X‑coordinate of the dragged part.",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 664838920691042
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The Y‑coordinate of the dragged part.",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 565272513768626
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedWidth",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "The width of the dragged part.",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 518483307999966
+				},
+				{
+					"eventType": "variable",
+					"name": "DraggedColor",
+					"type": "string",
+					"initialValue": "\"\"",
+					"comment": "The color of the dragged part.",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 384608578616594
+				},
+				{
+					"eventType": "variable",
 					"name": "DraggedDetailId",
 					"type": "number",
 					"initialValue": "-1",
@@ -2367,6 +2472,42 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
+							"sid": 805061970969128,
+							"parameters": {
+								"variable": "DraggedX",
+								"value": "Detail.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 712826329687499,
+							"parameters": {
+								"variable": "DraggedY",
+								"value": "Detail.Y"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 464511475765446,
+							"parameters": {
+								"variable": "DraggedWidth",
+								"value": "Detail.Width"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 258539876940503,
+							"parameters": {
+								"variable": "DraggedColor",
+								"value": "Detail.DetailColor"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
 							"sid": 358288706054824,
 							"parameters": {
 								"variable": "AnchorDetailId",
@@ -2441,33 +2582,71 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 395147538011959,
+									"parameters": {
+										"object": "Detail"
+									}
+								},
+								{
 									"id": "pick-by-comparison",
 									"objectClass": "System",
-									"sid": 440295224225070,
+									"sid": 280137815778834,
 									"parameters": {
-										"object": "DetailCandidates",
-										"expression": "DetailCandidates.UID",
+										"object": "Detail",
+										"expression": "Detail.UID",
 										"comparison": 1,
 										"value": "DraggedDetailId"
 									}
 								},
 								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 559342627081132,
+									"parameters": {
+										"instance-variable": "DetailType",
+										"comparison": 0,
+										"value": "JSON.Get(DraggedToyType & \".anchorType\")"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 706093652634041,
+									"parameters": {
+										"instance-variable": "ToyType",
+										"comparison": 0,
+										"value": "DraggedToyType"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Detail",
+									"sid": 485604747647866,
+									"parameters": {
+										"instance-variable": "DetailColor",
+										"comparison": 0,
+										"value": "DraggedColor"
+									}
+								},
+								{
 									"id": "pick-by-evaluate",
 									"objectClass": "System",
-									"sid": 857342761892048,
+									"sid": 286676060934375,
 									"parameters": {
-										"object": "DetailCandidates",
-										"expression": "distance(Detail.X, Detail.Y, DetailCandidates.X, DetailCandidates.Y) <= Detail.Width * AssemblyDropTolerance"
+										"object": "Detail",
+										"expression": "distance(DraggedX, DraggedY, Detail.X, Detail.Y)\n<= DraggedWidth * AssemblyDropTolerance"
 									}
 								},
 								{
 									"id": "pick-nearestfurthest",
-									"objectClass": "DetailCandidates",
-									"sid": 818525269003938,
+									"objectClass": "Detail",
+									"sid": 870152729156916,
 									"parameters": {
 										"which": "nearest",
-										"x": "Detail.X",
-										"y": "Detail.Y",
+										"x": "DraggedX",
+										"y": "DraggedY",
 										"z": "0",
 										"pick-all-tied": false
 									}
@@ -2477,10 +2656,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 127603118587946,
+									"sid": 706538867210932,
 									"parameters": {
 										"variable": "AnchorDetailId",
-										"value": "DetailCandidates.UID"
+										"value": "Detail.UID"
 									}
 								}
 							],
@@ -2641,6 +2820,16 @@
 												"instance-variable": "ToyType",
 												"comparison": 0,
 												"value": "DraggedToyType"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Detail",
+											"sid": 323432725782010,
+											"parameters": {
+												"instance-variable": "DetailColor",
+												"comparison": 0,
+												"value": "DraggedColor"
 											}
 										},
 										{
@@ -3539,33 +3728,37 @@
 					"language": "javascript",
 					"script": [
 						"const toScreen = instance => {",
-						"\tconst [x, y] = instance.layer.layerToCssPx(instance.x, instance.y);",
-						"\treturn {",
-						"\t\tuid: instance.uid,",
-						"\t\tx,",
-						"\t\ty,",
-						"\t\twidth: instance.width,",
-						"\t\theight: instance.height",
-						"\t};",
+						"  const [x, y] = instance.layer.layerToCssPx(instance.x, instance.y);",
+						"",
+						"  return {",
+						"    uid: instance.uid,",
+						"    x,",
+						"    y,",
+						"    width: instance.width,",
+						"    height: instance.height",
+						"  };",
 						"};",
+						"",
 						"const detailState = instance => ({",
-						"\t...toScreen(instance),",
-						"\tdetailType: instance.instVars.DetailType,",
-						"\ttoyType: instance.instVars.ToyType,",
-						"\tassemblyState: instance.instVars.AssemblyState,",
-						"\tcurrentCellId: instance.instVars.CurrentCellId,",
-						"\ttargetCellId: instance.instVars.TargetCellId,",
-						"\tpreviousCellId: instance.instVars.PreviousCellId,",
-						"\tisDragging: instance.instVars.isDragging",
+						"  ...toScreen(instance),",
+						"  detailType: instance.instVars.DetailType,",
+						"  toyType: instance.instVars.ToyType,",
+						"  assemblyState: instance.instVars.AssemblyState,",
+						"  currentCellId: instance.instVars.CurrentCellId,",
+						"  targetCellId: instance.instVars.TargetCellId,",
+						"  previousCellId: instance.instVars.PreviousCellId,",
+						"  isDragging: instance.instVars.isDragging",
 						"});",
+						"",
 						"const cellState = instance => ({",
-						"\t...toScreen(instance),",
-						"\tstate: instance.instVars.State",
+						"  ...toScreen(instance),",
+						"  state: instance.instVars.State",
 						"});",
+						"",
 						"runtime.setReturnValue(JSON.stringify({",
-						"\tdetails: runtime.objects.Detail.getAllInstances().map(detailState),",
-						"\tcells: runtime.objects.Cell.getAllInstances().map(cellState),",
-						"\tbodies: runtime.objects.BodyGraphic.getAllInstances().map(toScreen)",
+						"  details: runtime.objects.Detail.getAllInstances().map(detailState),",
+						"  cells: runtime.objects.Cell.getAllInstances().map(cellState),",
+						"  bodies: runtime.objects.BodyGraphic.getAllInstances().map(toScreen)",
 						"}));"
 					]
 				}
