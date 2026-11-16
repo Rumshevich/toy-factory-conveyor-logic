@@ -21,6 +21,8 @@ const scriptsInEvents = {
 		  detailType: instance.instVars.DetailType,
 		  toyType: instance.instVars.ToyType,
 		  assemblyState: instance.instVars.AssemblyState,
+	  detailColor: instance.instVars.DetailColor,
+	  attachedParts: instance.instVars.AttachedParts,
 		  currentCellId: instance.instVars.CurrentCellId,
 		  targetCellId: instance.instVars.TargetCellId,
 		  previousCellId: instance.instVars.PreviousCellId,
