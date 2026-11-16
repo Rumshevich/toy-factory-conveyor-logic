@@ -2,7 +2,7 @@
 
 const scriptsInEvents = {
 
-	async EventSheet1_Event69_Act1(runtime, localVars)
+	async EventSheet1_Event73_Act1(runtime, localVars)
 	{
 		const toScreen = instance => {
 		  const [x, y] = instance.layer.layerToCssPx(instance.x, instance.y);
