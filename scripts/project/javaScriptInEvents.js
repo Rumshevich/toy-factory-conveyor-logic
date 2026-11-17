@@ -33,11 +33,16 @@ const scriptsInEvents = {
 		  ...toScreen(instance),
 		  state: instance.instVars.State
 		});
+
+	const bodyState = instance => ({
+	  ...toScreen(instance),
+	  parentDetailId: instance.instVars.ParentDetailId
+	});
 		
 		runtime.setReturnValue(JSON.stringify({
 		  details: runtime.objects.Detail.getAllInstances().map(detailState),
 		  cells: runtime.objects.Cell.getAllInstances().map(cellState),
-		  bodies: runtime.objects.BodyGraphic.getAllInstances().map(toScreen)
+	  bodies: runtime.objects.BodyGraphic.getAllInstances().map(bodyState)
 		}));
 	}
 };
