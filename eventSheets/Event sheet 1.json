@@ -12,6 +12,56 @@
 			"sid": 818253490467027
 		},
 		{
+			"eventType": "variable",
+			"name": "SpawnFlightDuration",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 978345756339940
+		},
+		{
+			"eventType": "variable",
+			"name": "MoveDuration",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 113198662768102
+		},
+		{
+			"eventType": "variable",
+			"name": "SpawnInterval",
+			"type": "number",
+			"initialValue": "1.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 545006685217464
+		},
+		{
+			"eventType": "variable",
+			"name": "MoveCheckInterval",
+			"type": "number",
+			"initialValue": "0.1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 407792320190569
+		},
+		{
+			"eventType": "variable",
+			"name": "TolerancePercent",
+			"type": "number",
+			"initialValue": "0.08",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 858429601345761
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "INIT",
@@ -209,10 +259,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 216932326818630,
+									"sid": 603616063826187,
 									"parameters": {
 										"variable": "Tolerance",
-										"value": "Cell.Width * 0.08"
+										"value": "Cell.Width * TolerancePercent"
 									}
 								},
 								{
@@ -647,9 +697,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 335944871562290,
+							"sid": 320902020104727,
 							"parameters": {
-								"interval-seconds": "1.5"
+								"interval-seconds": "SpawnInterval"
 							}
 						}
 					],
@@ -810,14 +860,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Detail",
-											"sid": 726711939655072,
+											"sid": 507384239953608,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"EnterConveyor\"",
 												"property": "position",
 												"end-x": "Cell.X",
 												"end-y": "Cell.Y",
-												"time": "1",
+												"time": "SpawnFlightDuration",
 												"ease": "noease",
 												"destroy-on-complete": "no",
 												"loop": "no",
@@ -1743,9 +1793,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 820903802342832,
+							"sid": 569959597058865,
 							"parameters": {
-								"interval-seconds": "0.1"
+								"interval-seconds": "MoveCheckInterval"
 							}
 						},
 						{
@@ -2078,14 +2128,14 @@
 										{
 											"id": "tween-two-properties",
 											"objectClass": "Detail",
-											"sid": 507265472700342,
+											"sid": 893203515943363,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"MoveToCell\"",
 												"property": "position",
 												"end-x": "Cell.X",
 												"end-y": "Cell.Y",
-												"time": "1",
+												"time": "MoveDuration",
 												"ease": "noease",
 												"destroy-on-complete": "no",
 												"loop": "no",
