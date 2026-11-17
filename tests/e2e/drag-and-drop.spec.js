@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 const VIEWPORT = { width: 1024, height: 1365 };
+const PLAY_AREA = { left: 70, right: 730, top: 300, bottom: 1_300 };
 
 async function readState(page) {
   return page.evaluate(async () => {
@@ -11,6 +12,15 @@ async function readState(page) {
 
 function isVisible(item) {
   return item.x > 0 && item.y > 0 && item.x < VIEWPORT.width && item.y < VIEWPORT.height;
+}
+
+function isInPlayArea(item) {
+  return (
+    item.x > PLAY_AREA.left &&
+    item.y > PLAY_AREA.top &&
+    item.x < PLAY_AREA.right &&
+    item.y < PLAY_AREA.bottom
+  );
 }
 
 function distance(first, second) {
@@ -42,7 +52,7 @@ async function drag(page, from, to) {
 
 function pickDetailInCell(state) {
   return state.details.find(detail =>
-    isVisible(detail) &&
+    isInPlayArea(detail) &&
     detail.currentCellId !== -1 &&
     state.cells.some(cell => cell.uid === detail.currentCellId)
   );
@@ -74,14 +84,23 @@ test('деталь встаёт в свободную ячейку и освоб
   const detail = pickDetailInCell(before);
   expect(detail, 'Не найдена деталь для переноса').toBeTruthy();
 
-  const source = before.cells.find(cell => cell.uid === detail.currentCellId);
-  const target = before.cells.find(cell =>
-    isVisible(cell) && cell.state === 'empty' && distance(cell, detail) > detail.width
-  );
-  expect(source, 'Не найдена исходная ячейка детали').toBeTruthy();
-  expect(target, 'Не найдена видимая свободная ячейка').toBeTruthy();
+  await page.mouse.move(detail.x, detail.y);
+  await page.mouse.down();
+  await page.waitForTimeout(150);
 
-  await drag(page, detail, target);
+  const held = await readState(page);
+  const heldDetail = held.details.find(item => item.uid === detail.uid);
+  const source = held.cells.find(cell => cell.uid === heldDetail.previousCellId);
+  const target = held.cells.find(cell =>
+    isInPlayArea(cell) && cell.state === 'empty' && distance(cell, heldDetail) > heldDetail.width
+  );
+  expect(heldDetail.isDragging, 'Деталь не перешла в режим перетаскивания').toBe(true);
+  expect(source, 'При захвате не запомнилась исходная ячейка').toBeTruthy();
+  expect(target, 'Не найдена свободная ячейка в рабочей области').toBeTruthy();
+
+  await page.mouse.move(target.x, target.y, { steps: 8 });
+  await page.waitForTimeout(100);
+  await page.mouse.up();
   await page.waitForTimeout(300);
 
   const after = await readState(page);
