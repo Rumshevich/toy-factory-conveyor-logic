@@ -1,0 +1,8 @@
+{
+	"name": "LevelConfig",
+	"plugin-id": "Json",
+	"sid": 649135340061072,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": []
+}

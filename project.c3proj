@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -76,7 +83,9 @@
 			"AJAX",
 			"MachineGenerator",
 			"OrdersPlaceholder",
-			"HUD"
+			"HUD",
+			"LevelConfig",
+			"Browser"
 		],
 		"subfolders": [
 			{
@@ -203,9 +212,41 @@
 		"general": {
 			"items": [
 				{
+					"name": "level-config.schema.json",
+					"type": "application/json",
+					"sid": 239703606435632,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "level-config.json",
+					"type": "application/json",
+					"sid": 433473977436606,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
 					"name": "assembly-recipes.json",
 					"type": "application/json",
-					"sid": 627421493963845,
+					"sid": 808431629949607,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ajv-LICENSE.txt",
+					"type": "text/plain",
+					"sid": 457299948209720,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shift-config-validator.js",
+					"type": "application/javascript",
+					"sid": 959818157848848,
 					"file-info": {
 						"purpose": "none"
 					}

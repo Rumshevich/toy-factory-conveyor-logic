@@ -1899,6 +1899,14 @@
 			"sid": 158972908428368,
 			"tags": "",
 			"instanceVariables": {}
+		},
+		{
+			"type": "LevelConfig",
+			"properties": {},
+			"uid": 11,
+			"sid": 864819685712564,
+			"tags": "",
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],
