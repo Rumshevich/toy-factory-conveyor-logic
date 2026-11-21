@@ -1,2 +1,3 @@
 .DS_Store
 *.uistate.json
+node_modules/

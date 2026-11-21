@@ -3,13 +3,33 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "LevelConfigLoaded",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 576781699645762
+		},
+		{
+			"eventType": "variable",
+			"name": "LevelConfigError",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 275589621108249
+		},
+		{
+			"eventType": "variable",
 			"name": "DebugHeadScale",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 818253490467027
+			"sid": 558486889575737
 		},
 		{
 			"eventType": "variable",
@@ -60,6 +80,214 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 858429601345761
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SHIFT CONFIG",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 932415427935093
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 659784383276409,
+							"parameters": {
+								"variable": "LevelConfigLoaded",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 184339701435197,
+							"parameters": {
+								"variable": "LevelConfigError",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 634837160700162,
+							"parameters": {
+								"tag": "\"level-config\"",
+								"file": {
+									"path": "level-config.json"
+								}
+							}
+						}
+					],
+					"sid": 280934133563319
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 873360489298757,
+							"parameters": {
+								"tag": "\"level-config\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse",
+							"objectClass": "LevelConfig",
+							"sid": 276843260063296,
+							"parameters": {
+								"data": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 828056263503406
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-error",
+							"objectClass": "AJAX",
+							"sid": 176099328211396,
+							"parameters": {
+								"tag": "\"level-config\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 900776166161148,
+							"parameters": {
+								"variable": "LevelConfigLoaded",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 105665346096658,
+							"parameters": {
+								"variable": "LevelConfigError",
+								"value": "\"Не удалось загрузить level-config.json\""
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 140938411358145,
+							"parameters": {
+								"type": "error",
+								"message": "\"[SHIFT CONFIG] \" & LevelConfigError"
+							}
+						}
+					],
+					"sid": 816050603554319
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-parse-error",
+							"objectClass": "LevelConfig",
+							"sid": 853639393399491
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 725450643715143,
+							"parameters": {
+								"variable": "LevelConfigLoaded",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 195870820847905,
+							"parameters": {
+								"variable": "LevelConfigError",
+								"value": "\"Некорректный JSON в level-config.json\""
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 138968422046772,
+							"parameters": {
+								"type": "error",
+								"message": "\"[SHIFT CONFIG] \" & LevelConfigError"
+							}
+						}
+					],
+					"sid": 790610710390850
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-parse-success",
+							"objectClass": "LevelConfig",
+							"sid": 927016016357971
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "LoadShiftConfig",
+							"sid": 434735134537611
+						}
+					],
+					"sid": 409761675884366
+				},
+				{
+					"functionName": "LoadShiftConfig",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"runtime.globalVars.LevelConfigLoaded = 0;",
+								"runtime.globalVars.LevelConfigError = \"\";",
+								"try {",
+								"  if (!globalThis.ToyFactoryShiftConfig) {",
+								"    await runtime.assets.loadScripts(\"shift-config-validator.js\");",
+								"  }",
+								"  await globalThis.ToyFactoryShiftConfig.loadShiftConfig(runtime);",
+								"} catch (error) {",
+								"  runtime.globalVars.LevelConfigLoaded = 0;",
+								"  runtime.globalVars.LevelConfigError = \"Не удалось загрузить валидатор: \" + error.message;",
+								"  console.error(\"[SHIFT CONFIG] \" + runtime.globalVars.LevelConfigError);",
+								"}"
+							]
+						}
+					],
+					"sid": 666833450477349
+				}
+			],
+			"sid": 963209255648123
 		},
 		{
 			"eventType": "group",
@@ -624,7 +852,7 @@
 						{
 							"id": "request-project-file",
 							"objectClass": "AJAX",
-							"sid": 257915436797491,
+							"sid": 980971905611549,
 							"parameters": {
 								"tag": "\"assembly-recipes\"",
 								"file": {

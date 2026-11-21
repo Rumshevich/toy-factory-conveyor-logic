@@ -1,0 +1,17 @@
+{
+  "durationSeconds": 180,
+  "customersTotal": 3,
+  "maxActiveOrders": 6,
+  "toysBudget": 8,
+  "orderSize": {
+    "min": 1,
+    "max": 3,
+    "weights": [1, 1, 1]
+  },
+  "colors": ["blue"],
+  "toyPrice": 10,
+  "penaltyPerMissingToy": 5,
+  "shiftStartCost": 0,
+  "warnThresholdSeconds": 30,
+  "seed": null
+}
